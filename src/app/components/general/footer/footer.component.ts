@@ -1,6 +1,7 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 
 import { faCopy } from "@fortawesome/free-solid-svg-icons";
+import {ClipboardService} from "../../../services/clipboardService/clipboard.service";
 
 @Component({
   selector: 'app-footer',
@@ -9,13 +10,14 @@ import { faCopy } from "@fortawesome/free-solid-svg-icons";
 })
 export class FooterComponent implements OnInit {
 
-  @ViewChild('copyButton') copyButton!: ElementRef<HTMLButtonElement>;
   clipboardIcon = faCopy;
 
   startYear = 2022;
   yearInterval: string = `${this.startYear}`;
 
-  constructor() {
+  constructor(
+    private clipboardService: ClipboardService
+  ) {
     const year = new Date().getFullYear();
     if (year > this.startYear){
       this.yearInterval += `-${year}`;
@@ -25,11 +27,12 @@ export class FooterComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  @ViewChild('copyButton') copyButton!: ElementRef<HTMLButtonElement>;
   copyEmail() {
-    navigator.clipboard.writeText('enzo.filangi@efrei.net').then(
-      () => {
-        this.copyButton.nativeElement.classList.add("text-green-400", "hover:text-green-400");
-        setTimeout(() => this.copyButton.nativeElement.classList.remove("text-green-400", "hover:text-green-400"), 1000);
+    this.clipboardService.copyEmail(this.copyButton,
+      (element: ElementRef) => {
+        element.nativeElement.classList.add("text-green-400", "hover:text-green-400");
+        setTimeout(() => element.nativeElement.classList.remove("text-green-400", "hover:text-green-400"), 1000);
       }
     );
   }
