@@ -1,0 +1,24 @@
+<footer class="w-full h-full bg-off-black text-off-white text-sm flex flex-row justify-between items-center p-4">
+  <!-- Contact box -->
+  <div class="basis-0 grow flex justify-start items-center">
+    <div>
+      <p class="font-bold mb-2" i18n>Contactez-moi</p>
+      <div class="flex">
+        <p class="mr-2">Email : <a href="mailto:enzo.filangi@efrei.net" class="underline hover:text-slate-300">enzo.filangi@efrei.net</a></p>
+        <button class="cursor-pointer hover:text-slate-300 active:scale-90" (click)="copyEmail()" #copyButton>
+          <fa-icon [icon]="clipboardIcon"></fa-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="basis-0 grow flex justify-center items-center">
+    <p>© {{yearInterval}} Enzo Filangi - <span i18n>Tous droits reservés</span></p>
+  </div>
+
+  <!-- Legal -->
+  <div class="basis-0 grow flex justify-end items-center">
+    <a class="underline hover:text-slate-300" i18n [routerLink]="'legal'">Mentions légales</a>
+  </div>
+</footer>

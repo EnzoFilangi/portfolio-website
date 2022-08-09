@@ -1,1 +1,13 @@
-<app-navbar></app-navbar>
+<!--  Use a wrapper so that the page is always at least as high as the screen, and
+      position the content inside another wrapper that leave a bit of space for
+      the footer bellow it
+      Source : https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/
+-->
+<div class="relative min-h-screen">
+  <div class="pb-16">
+    <app-navbar></app-navbar>
+    <router-outlet></router-outlet>
+  </div>
+
+  <app-footer class="w-full h-16 absolute bottom-0"></app-footer>
+</div>

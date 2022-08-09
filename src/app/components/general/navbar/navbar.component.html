@@ -1,10 +1,10 @@
 <nav class="w-full sticky top-0 bg-off-black flex flex-row justify-between items-center py-4 px-10 duration-500 ease-out" #navbar>
   <div>
-    <h1 class="text-2xl font-bold text-off-white">Enzo Filangi</h1>
+    <a class="text-2xl font-bold text-off-white" [routerLink]="''">Enzo Filangi</a>
   </div>
   <div class="flex justify-between text-off-white uppercase text-sm">
-    <p class="mr-5" i18n>Compétences</p>
-    <p class="mr-5" i18n>Projets</p>
-    <p i18n>Moi</p>
+    <a class="mr-5" [routerLink]="'competences'" i18n>Compétences</a>
+    <a class="mr-5" [routerLink]="'projets'" i18n>Projets</a>
+    <a [routerLink]="'moi'" i18n>Moi</a>
   </div>
 </nav>
