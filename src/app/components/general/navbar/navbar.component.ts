@@ -1,5 +1,7 @@
 import {AfterViewInit, Component, ElementRef, HostListener, ViewChild} from '@angular/core';
 
+import { faBars, faUser, faBriefcase, faCrosshairs } from "@fortawesome/free-solid-svg-icons";
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -7,11 +9,20 @@ import {AfterViewInit, Component, ElementRef, HostListener, ViewChild} from '@an
 })
 export class NavbarComponent implements AfterViewInit {
 
-  readonly minScreenHeight: number = 750;
+  hamburgerMenuIcon = faBars;
+  skillsIcon = faCrosshairs;
+  projectsIcon = faBriefcase;
+  meIcon = faUser;
+
+  readonly minScreenHeight: number = 800;
   shadowStarts: number = 150;
   scrollAnimationEnabled: boolean = true;
 
+  isNavigationMenuVisible: boolean = false;
+
   @ViewChild('navbar') navbar!: ElementRef;
+  @ViewChild('navigationMenu') navigationMenu!: ElementRef;
+  @ViewChild('navigationMenuButton') navigationMenuButton!: ElementRef;
 
   @HostListener('window:scroll', ['$event'])
   applyShadowOnScroll() {
@@ -41,6 +52,29 @@ export class NavbarComponent implements AfterViewInit {
     }
   }
 
+  /**
+   * Toggles the navigation menu on (visible) or off (hidden)
+   */
+  toggleNavigationMenu() {
+    if (this.isNavigationMenuVisible){
+      this.isNavigationMenuVisible = false;
+      this.navigationMenu.nativeElement.classList.add('hidden');
+    } else {
+      this.isNavigationMenuVisible = true;
+      this.navigationMenu.nativeElement.classList.remove('hidden');
+    }
+  }
 
-
+  /**
+   * Hides the popup menu when clicking anywhere on the screen expect on the menu button itself
+   * @param target
+   */
+  @HostListener('document:click', ['$event.target'])
+  hideNavigationMenu(target: Element) {
+    // Check that the target of the click isn't contained in the button
+    if (!this.navigationMenuButton.nativeElement.contains(target)) {
+      this.isNavigationMenuVisible = false;
+      this.navigationMenu.nativeElement.classList.add('hidden');
+    }
+  }
 }

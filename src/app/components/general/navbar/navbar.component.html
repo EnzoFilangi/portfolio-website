@@ -1,10 +1,23 @@
-<nav class="w-full fixed top-0 bg-off-black flex flex-row justify-between items-center py-4 px-10 duration-500 ease-out z-50" #navbar>
-  <div>
-    <a class="text-2xl font-bold text-off-white" [routerLink]="''">Enzo Filangi</a>
-  </div>
-  <div class="flex justify-between text-off-white uppercase text-sm">
+<nav class="w-full fixed top-0 bg-off-black flex flex-row justify-between items-center py-4 sm:px-10 px-2 duration-500 ease-out z-50" #navbar>
+  <a class="text-2xl font-bold text-off-white" [routerLink]="''">Enzo Filangi</a>
+  <div class="flex justify-between text-off-white uppercase text-sm hidden sm:block">
     <a class="mr-5" [routerLink]="'competences'" i18n>Compétences</a>
     <a class="mr-5" [routerLink]="'projets'" i18n>Projets</a>
     <a [routerLink]="'moi'" i18n>Moi</a>
+  </div>
+  <div class="relative sm:hidden">
+    <!-- Button appearing only on mobile to display the navigation menu -->
+    <button (click)="toggleNavigationMenu()" class="bg-neutral-800 border border-neutral-500 rounded h-12 w-12 text-off-white sm:hidden" #navigationMenuButton>
+      <fa-icon [icon]="hamburgerMenuIcon" size="2x"></fa-icon>
+    </button>
+
+    <!-- Hidden navigation menu that appears only when clicking the button on mobile -->
+    <div class="absolute right-0 -bottom-36 h-32 w-44 text-off-white bg-neutral-800 border border-neutral-500 rounded p-2 flex flex-col justify-evenly hidden" #navigationMenu>
+      <a [routerLink]="'competences'" i18n><fa-icon [icon]="skillsIcon" class="mr-2"></fa-icon>Compétences</a>
+      <hr class="border-neutral-500">
+      <a [routerLink]="'projets'" i18n><fa-icon [icon]="projectsIcon" class="mr-2"></fa-icon>Projets</a>
+      <hr class="border-neutral-500">
+      <a [routerLink]="'moi'" i18n><fa-icon [icon]="meIcon" class="mr-2"></fa-icon>Moi</a>
+    </div>
   </div>
 </nav>
