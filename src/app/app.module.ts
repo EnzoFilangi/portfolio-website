@@ -9,6 +9,7 @@ import { LandingPageComponent } from './components/pages/landing-page/landing-pa
 import { FooterComponent } from './components/general/footer/footer.component';
 import { NotFoundComponent } from './components/general/not-found/not-found.component';
 import { StudiesTimelineComponent } from './components/pages/landing-page/studies-timeline/studies-timeline.component';
+import { HeroHeaderComponent } from './components/pages/landing-page/hero-header/hero-header.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { StudiesTimelineComponent } from './components/pages/landing-page/studie
     LandingPageComponent,
     FooterComponent,
     NotFoundComponent,
-    StudiesTimelineComponent
+    StudiesTimelineComponent,
+    HeroHeaderComponent
   ],
   imports: [
     BrowserModule,

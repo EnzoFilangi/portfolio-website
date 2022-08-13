@@ -1,0 +1,21 @@
+<div class="relative min-h-screen w-full bg-off-black flex flex-col justify-center items-center content-center pt-32 pb-40">
+  <img src="assets/images/Enzo.jpg" alt="Profile picture" class="aspect-square object-cover object-top h-[200px] rounded-full mb-10 glow-white-animated animation-infinite-3s">
+  <h1 class="text-6xl font-bold font-mono text-off-white tracking-wider mb-2 mx-2 md:m-0">Enzo Filangi</h1>
+  <div class="px-3 sm:p-0 my-2">
+    <h1 class="text-xl md:text-3xl font-light font-mono text-off-white tracking-wider sm:mx-5">M1 Software Engineering - Efrei Paris</h1>
+    <div class="h-1.5 w-full mt-2 mb-5 rounded-full bg-gradient-to-r from-red to-orange w-full glow-orange-animated animation-infinite-3s"></div>
+    <div class="w-full flex flex-row justify-around items-center text-off-white">
+      <div class="relative">
+        <fa-icon [icon]="mailIcon" size="3x" class="cursor-pointer" (click)="copyEmail()"></fa-icon>
+        <div class="absolute bg-neutral-600 border border-neutral-500 p-1 rounded shadow-2xl hidden opacity-0 duration-200" #copyConfirm>
+          <p class="text-off-white w-28 text-center" i18n>Email copié !</p>
+        </div>
+      </div>
+      <a href="https://www.linkedin.com/in/enzo-filangi/" target="_blank"><fa-icon [icon]="linkedinIcon" size="3x"></fa-icon></a>
+      <a href="https://github.com/EnzoFilangi" target="_blank"><fa-icon [icon]="githubIcon" size="3x"></fa-icon></a>
+      <a href=""><fa-icon [icon]="cvIcon" size="3x"></fa-icon></a>
+    </div>
+  </div>
+
+  <fa-icon class="text-off-white glow-white-animated-small animation-infinite-3s absolute bottom-0" [icon]="goDown" size="6x"></fa-icon>
+</div>
