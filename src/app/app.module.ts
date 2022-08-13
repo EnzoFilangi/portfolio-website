@@ -8,6 +8,7 @@ import { NavbarComponent } from './components/general/navbar/navbar.component';
 import { LandingPageComponent } from './components/pages/landing-page/landing-page.component';
 import { FooterComponent } from './components/general/footer/footer.component';
 import { NotFoundComponent } from './components/general/not-found/not-found.component';
+import { StudiesTimelineComponent } from './components/pages/landing-page/studies-timeline/studies-timeline.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { NotFoundComponent } from './components/general/not-found/not-found.comp
     NavbarComponent,
     LandingPageComponent,
     FooterComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    StudiesTimelineComponent
   ],
   imports: [
     BrowserModule,
