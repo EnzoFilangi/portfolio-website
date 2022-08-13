@@ -1,0 +1,113 @@
+<!-- Title -->
+<h1 class="xl:text-6xl md:text-6xl sm:text-5xl text-4xl font-extrabold text-off-black mb-3" i18n>
+  Expérience<br>
+  <span class="text-gradient from-red to-orange">Professionnelle</span>
+</h1>
+
+<div class="flex flex-col text-off-black font-mono">
+  <!-- GMM -->
+  <div class="flex flex-row flex-wrap justify-between">
+    <!-- Use custom width elements to have a small space between (smaller than with w-8/12 and w-3/12).
+         Would like to use grid layout to do this, but it's not possible because we need the
+         flex-direction: row-reverse; of flexboxes for the even elements
+
+         We also play with "flex-wrap" and the roundness of borders to have two cards when on large screens
+         (one for the picture and one for the text) that combine to form a more traditionnal card on
+         small screens
+    -->
+    <img src="assets/images/GMM.jpg" alt="General Medical Merate" class="xl:w-[60%] w-full object-cover xl:rounded-xl rounded-t-xl custom-shadow">
+
+    <div class="xl:w-[38%] w-full bg-white xl:rounded-xl rounded-b-xl custom-shadow p-5">
+      <img src="assets/images/GMM-logo.png" alt="General Medical Merate Logo" class="w-[200px]">
+      <h1 class="font-black mt-5">
+        <span class="md:text-4xl text-2xl">General Medical Merate</span><br>
+        <span class="md:text-3xl text-xl" i18n>Développeur logiciel</span>
+      </h1>
+      <div class="md:text-2xl text-lg font-light mt-5">
+        <div class="flex flex-row">
+          <fa-icon [icon]="calendarIcon" class="w-10"></fa-icon>
+          <p class="grow" i18n>Novembre 2021 - Avril 2022</p>
+        </div>
+        <div class="flex flex-row mt-5">
+          <fa-icon [icon]="locationIcon" class="w-10"></fa-icon>
+          <p class="grow" i18n>Seriate, Lombadie, Italie</p>
+        </div>
+      </div>
+      <p class="mt-5" i18n>Entreprise italienne spécialisée dans la conception et manufacture de matériel de radiologie.</p>
+      <p class="mt-5" i18n>Élaboration d’éléments d’interface complexes en réalité augmentée. Vision par ordinateur.</p>
+    </div>
+  </div>
+
+  <!-- Primax -->
+  <div class="flex flex-row-reverse flex-wrap justify-between mt-8">
+    <img src="assets/images/primax.jpg" alt="Primax" class="xl:w-[60%] w-full object-cover xl:rounded-xl rounded-t-xl custom-shadow">
+
+    <div class="xl:w-[38%] w-full bg-white xl:rounded-xl rounded-b-xl custom-shadow p-5 xl:text-right">
+      <img src="assets/images/primax-logo.png" alt="Primax Logo" class="w-[200px] xl:ml-auto">
+      <h1 class="font-black mt-5">
+        <span class="md:text-4xl text-2xl">Primax</span><br>
+        <span class="md:text-3xl text-xl" i18n>Assistant commercial</span>
+      </h1>
+      <div class="md:text-2xl text-lg font-light mt-5">
+        <div class="flex xl:flex-row-reverse flex-row">
+          <fa-icon [icon]="calendarIcon" class="w-10"></fa-icon>
+          <p class="grow" i18n>Janvier 2020</p>
+        </div>
+        <div class="flex xl:flex-row-reverse flex-row mt-5">
+          <fa-icon [icon]="locationIcon" class="w-10"></fa-icon>
+          <p class="grow" i18n>Rungis, France (94)</p>
+        </div>
+      </div>
+      <p class="mt-5" i18n>Vente de matériel de radiologie sur l’entièreté du marché français.</p>
+      <p class="mt-5" i18n>Utilisation de techiques commerciales avancées. Relation client long terme. <br>Négocier et préparer une affaire.</p>
+    </div>
+  </div>
+
+  <!-- Minigolf -->
+  <div class="flex flex-row flex-wrap justify-between mt-8">
+    <img src="assets/images/minigolf.jpeg" alt="Minigolf de l'impérial" class="xl:w-[60%] w-full object-cover xl:rounded-xl rounded-t-xl custom-shadow">
+
+    <div class="xl:w-[38%] w-full bg-white xl:rounded-xl rounded-b-xl custom-shadow p-5">
+      <h1 class="font-black mt-5">
+        <span class="md:text-4xl text-2xl">Minigolf de l'impérial</span><br>
+        <span class="md:text-3xl text-xl" i18n>Job étudiant</span>
+      </h1>
+      <div class="md:text-2xl text-lg font-light mt-5">
+        <div class="flex flex-row">
+          <fa-icon [icon]="calendarIcon" class="w-10"></fa-icon>
+          <p class="grow" i18n>Juillet 2019</p>
+        </div>
+        <div class="flex flex-row mt-5">
+          <fa-icon [icon]="locationIcon" class="w-10"></fa-icon>
+          <p class="grow" i18n>Annecy, France (74)</p>
+        </div>
+      </div>
+      <p class="mt-5" i18n>Interagir avec la clientèle dans le but de réaliser une vente. Gérer un stand, une caisse et du stock. Résoudre des litiges client.</p>
+      <p class="mt-5" i18n>Expliquer les consignes avec pédagogie. Langues étrangères.</p>
+    </div>
+  </div>
+
+  <!-- Castorama -->
+  <div class="flex flex-row-reverse flex-wrap justify-between mt-8">
+    <img src="assets/images/castorama.jpg" alt="Castorama" class="xl:w-[60%] w-full object-cover xl:rounded-xl rounded-t-xl custom-shadow">
+
+    <div class="xl:w-[38%] w-full bg-white xl:rounded-xl rounded-b-xl custom-shadow p-5 xl:text-right">
+      <img src="assets/images/castoramaLogo.jpeg" alt="Castorama Logo" class="w-[200px] xl:ml-auto">
+      <h1 class="font-black mt-5">
+        <span class="md:text-4xl text-2xl">Castorama</span><br>
+        <span class="md:text-3xl text-xl" i18n>Stage ouvrier de 1<sup>ère</sup> année</span>
+      </h1>
+      <div class="md:text-2xl text-lg font-light mt-5">
+        <div class="flex xl:flex-row-reverse flex-row">
+          <fa-icon [icon]="calendarIcon" class="w-10"></fa-icon>
+          <p class="grow" i18n>Juin 2019</p>
+        </div>
+        <div class="flex xl:flex-row-reverse flex-row mt-5">
+          <fa-icon [icon]="locationIcon" class="w-10"></fa-icon>
+          <p class="grow" i18n>Fresnes, France (94)</p>
+        </div>
+      </div>
+      <p class="mt-5" i18n>Respecter des consignes comportementales strictes sur le lieu de travail.<br>Introduction au monde du travail.<br>S’adapter au fonctionnement d’un service.</p>
+    </div>
+  </div>
+</div>

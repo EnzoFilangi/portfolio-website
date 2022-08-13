@@ -10,6 +10,7 @@ import { FooterComponent } from './components/general/footer/footer.component';
 import { NotFoundComponent } from './components/general/not-found/not-found.component';
 import { StudiesTimelineComponent } from './components/pages/landing-page/studies-timeline/studies-timeline.component';
 import { HeroHeaderComponent } from './components/pages/landing-page/hero-header/hero-header.component';
+import { ProfessionalExperienceListComponent } from './components/pages/landing-page/professional-experience-list/professional-experience-list.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HeroHeaderComponent } from './components/pages/landing-page/hero-header
     FooterComponent,
     NotFoundComponent,
     StudiesTimelineComponent,
-    HeroHeaderComponent
+    HeroHeaderComponent,
+    ProfessionalExperienceListComponent
   ],
   imports: [
     BrowserModule,
