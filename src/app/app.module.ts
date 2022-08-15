@@ -12,6 +12,7 @@ import { StudiesTimelineComponent } from './components/pages/landing-page/studie
 import { HeroHeaderComponent } from './components/pages/landing-page/hero-header/hero-header.component';
 import { ProfessionalExperienceListComponent } from './components/pages/landing-page/professional-experience-list/professional-experience-list.component';
 import { AssociativeExperienceListComponent } from './components/pages/landing-page/associative-experience-list/associative-experience-list.component';
+import { FeaturedProjectsComponent } from './components/pages/landing-page/featured-projects/featured-projects.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AssociativeExperienceListComponent } from './components/pages/landing-p
     StudiesTimelineComponent,
     HeroHeaderComponent,
     ProfessionalExperienceListComponent,
-    AssociativeExperienceListComponent
+    AssociativeExperienceListComponent,
+    FeaturedProjectsComponent
   ],
   imports: [
     BrowserModule,

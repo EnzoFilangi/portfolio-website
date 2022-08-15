@@ -21,6 +21,9 @@ module.exports = {
         'cyan-green': '#29D6B9',
         'cyan-blue': '#28B8D5'
       },
+      maxWidth: {
+        'prose': '100ch',
+      }
     },
   },
   plugins: [],
