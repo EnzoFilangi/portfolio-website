@@ -22,8 +22,10 @@
           However, we gave the parent the .card-stack custom class which applies the "relative z-50" classes
           to every child except div
           Therefore, the text above renders on top of those divs
+
+          We also hide the cards on mobile as the user experience woudn't be so great
     -->
-    <div class="absolute cursor-pointer open-slightly left-0 top-0 rotate-6 w-full h-full rounded-xl bg-off-black text-off-white font-mono p-5 shadow-sm shadow-white duration-100 ease-out" #teacherCard (click)="openCard(teacherCard)">
+    <div class="xl:block hidden absolute cursor-pointer open-slightly left-0 top-0 rotate-6 w-full h-full rounded-xl bg-off-black text-off-white font-mono p-5 shadow-sm shadow-white duration-100 ease-out" #teacherCard (click)="openCard(teacherCard)">
       <img src="assets/images/fapLogo.png" alt="Fap Efrei Logo" class="h-28 mx-auto my-3">
       <h1 class="text-3xl font-extrabold text-center" i18n>Formateur</h1>
       <p class="text-xl text-blue text-center mb-3" i18n>Octobre 2018 - Mars 2019</p>
@@ -33,7 +35,7 @@
         Dispenser des cours d’informatique aux séniors de la ville.
       </p>
     </div>
-    <div class="absolute cursor-pointer open-slightly left-0 top-0 rotate-3 w-full h-full rounded-xl bg-off-black text-off-white font-mono p-5 shadow-sm shadow-white duration-100 ease-out" #eventManagerCard (click)="openCard(eventManagerCard)">
+    <div class="xl:block hidden absolute cursor-pointer open-slightly left-0 top-0 rotate-3 w-full h-full rounded-xl bg-off-black text-off-white font-mono p-5 shadow-sm shadow-white duration-100 ease-out" #eventManagerCard (click)="openCard(eventManagerCard)">
       <img src="assets/images/fapLogo.png" alt="Fap Efrei Logo" class="h-28 mx-auto my-3">
       <h1 class="text-3xl font-extrabold text-center" i18n>Responsable <br>des évènements</h1>
       <p class="text-xl text-blue text-center mb-3" i18n>Mars 2019 - Mars 2020</p>
@@ -44,7 +46,7 @@
       </p>
     </div>
     <!-- Put the background back on top of the two extra cards, but below the text -->
-    <div class="absolute left-0 top-0 rotate-0 w-full h-full rounded-xl bg-off-black shadow-sm shadow-white"></div>
+    <div class="xl:block hidden absolute left-0 top-0 rotate-0 w-full h-full rounded-xl bg-off-black shadow-sm shadow-white"></div>
   </div>
 
   <!-- Asian'Efrei -->
