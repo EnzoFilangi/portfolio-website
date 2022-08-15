@@ -1,0 +1,75 @@
+<!-- Title -->
+<h1 class="xl:text-6xl md:text-6xl sm:text-5xl text-4xl font-extrabold text-off-black mb-3" i18n>
+  Expériences<br>
+  <span class="text-gradient from-red to-orange">Associatives</span>
+</h1>
+
+<div class="w-full flex flex-row flex-wrap justify-around">
+  <!-- FAP - Since there are multiple experiences in this category, we display some tilted rectangles behind to hint that there are more cards -->
+  <div class="relative min-w-[250px] max-w-[400px] grow rounded-xl bg-off-black text-off-white font-mono m-5 p-5 thick-shadow card-stack" #fapCard>
+    <img src="assets/images/fapLogo.png" alt="Fap Efrei Logo" class="h-28 mx-auto my-3">
+    <h1 class="text-3xl font-extrabold text-center" i18n>Trésorier <br>Vice-président</h1>
+    <p class="text-xl text-blue text-center mb-3" i18n>Mars 2020 - Mars 2021</p>
+    <p i18n>
+      FAP Efrei - Association de formation en informatique aux séniors, enfants, personnes en situation de handicap, et personnes en réinsertion professionnelle.<br>
+      <br>
+      Gérer les fonds de l'association et son financement.<br>
+      <br>
+      Plannifier le futur de l’association. Gestion quotidienne.
+    </p>
+
+    <!--  As these are position absolute, they should render on top of everything above.
+          However, we gave the parent the .card-stack custom class which applies the "relative z-50" classes
+          to every child except div
+          Therefore, the text above renders on top of those divs
+    -->
+    <div class="absolute cursor-pointer open-slightly left-0 top-0 rotate-6 w-full h-full rounded-xl bg-off-black text-off-white font-mono p-5 shadow-sm shadow-white duration-100 ease-out" #teacherCard (click)="openCard(teacherCard)">
+      <img src="assets/images/fapLogo.png" alt="Fap Efrei Logo" class="h-28 mx-auto my-3">
+      <h1 class="text-3xl font-extrabold text-center" i18n>Formateur</h1>
+      <p class="text-xl text-blue text-center mb-3" i18n>Octobre 2018 - Mars 2019</p>
+      <p i18n>
+        FAP Efrei<br>
+        <br>
+        Dispenser des cours d’informatique aux séniors de la ville.
+      </p>
+    </div>
+    <div class="absolute cursor-pointer open-slightly left-0 top-0 rotate-3 w-full h-full rounded-xl bg-off-black text-off-white font-mono p-5 shadow-sm shadow-white duration-100 ease-out" #eventManagerCard (click)="openCard(eventManagerCard)">
+      <img src="assets/images/fapLogo.png" alt="Fap Efrei Logo" class="h-28 mx-auto my-3">
+      <h1 class="text-3xl font-extrabold text-center" i18n>Responsable <br>des évènements</h1>
+      <p class="text-xl text-blue text-center mb-3" i18n>Mars 2019 - Mars 2020</p>
+      <p i18n>
+        FAP Efrei<br>
+        <br>
+        Organiser des evènements au sein de l’école ou lors de salons pour recruter des bénévoles et faire connaître l’association.
+      </p>
+    </div>
+    <!-- Put the background back on top of the two extra cards, but below the text -->
+    <div class="absolute left-0 top-0 rotate-0 w-full h-full rounded-xl bg-off-black shadow-sm shadow-white"></div>
+  </div>
+
+  <!-- Asian'Efrei -->
+  <div class="min-w-[250px] max-w-[400px] grow rounded-xl bg-off-black text-off-white font-mono m-5 p-5 thick-shadow">
+    <img src="assets/images/asianLogo.svg" alt="Asian'Efrei Logo" class="h-28 mx-auto my-3">
+    <h1 class="text-3xl font-extrabold text-center" i18n>Responsable <br>Technique</h1>
+    <p class="text-xl text-blue text-center mb-3" i18n>Mars 2021 - Mars 2023</p>
+    <p i18n>
+      Asian’Efrei - Association de culture asiatique.<br>
+      <br>
+      Développer le site internet de l’association.<br>
+      <br>
+      Gérer l'infrastructure technique d’Asian’Efrei.
+    </p>
+  </div>
+
+  <!-- Taverne du troll -->
+  <div class="min-w-[250px] max-w-[400px] grow rounded-xl bg-off-black text-off-white font-mono m-5 p-5 thick-shadow">
+    <img src="assets/images/taverneLogo.png" alt="Taverne du Troll Logo" class="h-28 mx-auto my-3 rounded-xl">
+    <h1 class="text-3xl font-extrabold text-center" i18n>Membre</h1>
+    <p class="text-xl text-blue text-center mb-3" i18n>Septembre 2019 - Septembre 2023</p>
+    <p i18n>
+      Taverne du Troll - Association de jeux sur table et de jeux de société.<br>
+      <br>
+      Participation à l’oganisation des divers évènements et tournois.
+    </p>
+  </div>
+</div>

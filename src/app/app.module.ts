@@ -11,6 +11,7 @@ import { NotFoundComponent } from './components/general/not-found/not-found.comp
 import { StudiesTimelineComponent } from './components/pages/landing-page/studies-timeline/studies-timeline.component';
 import { HeroHeaderComponent } from './components/pages/landing-page/hero-header/hero-header.component';
 import { ProfessionalExperienceListComponent } from './components/pages/landing-page/professional-experience-list/professional-experience-list.component';
+import { AssociativeExperienceListComponent } from './components/pages/landing-page/associative-experience-list/associative-experience-list.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ProfessionalExperienceListComponent } from './components/pages/landing-
     NotFoundComponent,
     StudiesTimelineComponent,
     HeroHeaderComponent,
-    ProfessionalExperienceListComponent
+    ProfessionalExperienceListComponent,
+    AssociativeExperienceListComponent
   ],
   imports: [
     BrowserModule,
