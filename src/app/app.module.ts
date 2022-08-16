@@ -13,6 +13,7 @@ import { HeroHeaderComponent } from './components/pages/landing-page/hero-header
 import { ProfessionalExperienceListComponent } from './components/pages/landing-page/professional-experience-list/professional-experience-list.component';
 import { AssociativeExperienceListComponent } from './components/pages/landing-page/associative-experience-list/associative-experience-list.component';
 import { FeaturedProjectsComponent } from './components/pages/landing-page/featured-projects/featured-projects.component';
+import { LegalComponent } from './components/pages/legal/legal.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FeaturedProjectsComponent } from './components/pages/landing-page/featu
     HeroHeaderComponent,
     ProfessionalExperienceListComponent,
     AssociativeExperienceListComponent,
-    FeaturedProjectsComponent
+    FeaturedProjectsComponent,
+    LegalComponent
   ],
   imports: [
     BrowserModule,
