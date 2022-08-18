@@ -8,7 +8,7 @@ import {Component, Input} from '@angular/core';
 export class LogoCardComponent {
 
   @Input() pictureUrl!: string;
-  @Input() text!: string;
+  @Input() text: string = "";
 
   @Input() fixedSize: boolean = true;
 
