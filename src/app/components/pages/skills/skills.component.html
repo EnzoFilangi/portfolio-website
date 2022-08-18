@@ -1,0 +1,111 @@
+<!-- Page header -->
+<div class="w-full p-5 bg-off-black">
+  <div class="w-full flex flex-row justify-between items-center">
+    <div class="grow h-1.5 rounded-full bg-gradient-to-r from-red to-orange"></div>
+    <h1 class="mx-5 text-off-white lg:text-7xl md:text-5xl sm:text-3xl text-xl font-extrabold" i18n>Mes compétences</h1>
+    <div class="grow h-1.5 rounded-full bg-gradient-to-r from-red to-orange"></div>
+  </div>
+  <p class="w-full sm:pl-10 mt-5 md:text-xl sm:text-base text-sm text-off-white" i18n>
+    Au cours de mes projets, stages, et expériences diverses j’ai pu acquérir un ensemble de compétences variées.<br>
+    Voici donc une liste des langages, technologies et autre que je sais manier; organisée selon mon niveau de maîtrise pour chacun d’eux.
+  </p>
+</div>
+
+<!-- Main content -->
+<div class="sm:w-4/5 w-full mx-auto sm:px-0 px-5 flex flex-col justify-start my-10">
+  <!-- Programming languages -->
+  <h1 class="md:pb-4 pb-2 md:text-5xl sm:text-3xl text-2xl font-extrabold text-gradient from-red to-orange" i18n>Langages, frameworks et librairies</h1>
+  <!-- Main languages -->
+  <h2 class="md:text-3xl sm:text-2xl text-xl font-extrabold text-gradient from-cyan-green to-cyan-blue" i18n>Je maîtrise</h2>
+  <div>
+    <div class="flex flex-row flex-wrap justify-around items-center -mx-3">
+      <app-logo-card [pictureUrl]="'assets/images/programming-logos/HTML5.svg'" [text]="'HTML 5'"></app-logo-card>
+      <app-logo-card [pictureUrl]="'assets/images/programming-logos/JavaScript.svg'" [text]="'JavaScript'"></app-logo-card>
+      <app-logo-card [pictureUrl]="'assets/images/programming-logos/TypeScript.png'" [text]="'TypeScript'"></app-logo-card>
+      <app-logo-card [pictureUrl]="'assets/images/programming-logos/Angular.svg'" [text]="'Angular'"></app-logo-card>
+      <app-logo-card [pictureUrl]="'assets/images/programming-logos/CSS.svg'" [text]="'CSS'"></app-logo-card>
+      <app-logo-card [pictureUrl]="'assets/images/programming-logos/Bootstrap.svg'" [text]="'Bootstrap'"></app-logo-card>
+      <app-logo-card [pictureUrl]="'assets/images/programming-logos/Tailwind.jpg'" [text]="'Tailwind CSS'"></app-logo-card>
+      <app-logo-card [pictureUrl]="'assets/images/programming-logos/Expressjs.png'" [text]="'express'"></app-logo-card>
+    </div>
+    <p class="mt-3 text-off-black text-xl" i18n>
+      Le développement web étant mon domaine de compétence principal, je maîtrise bien les langages et frameworks qui y sont employés. J’ai pu réaliser de nombreux projets en utilisant ces technologies, aussi bien côté frontend que backend.
+    </p>
+  </div>
+  <div class="flex flex-row lg:flex-nowrap flex-wrap justify-around items-center -mx-3 mt-3">
+    <app-logo-card [pictureUrl]="'assets/images/programming-logos/SQL.jpg'" [text]="'SQL'"></app-logo-card>
+    <app-logo-card [pictureUrl]="'assets/images/programming-logos/PL-SQL.png'" [text]="'PL/SQL'"></app-logo-card>
+    <div class="grow">
+      <p class="mx-3 text-off-black text-xl break-normal lg:mt-0 mt-3" i18n>
+        Le langage SQL étant le standard de la manipulation de données, il était indispensable pour moi de le maîtriser. J’ai également eu l’occasion de réaliser des bases de données plus intelligente en utilisant le PL/SQL pour mieux automatiser la gestion de la base de données.
+      </p>
+    </div>
+  </div>
+  <div class="flex flex-row lg:flex-nowrap flex-wrap justify-around items-center -mx-3 mt-3">
+    <app-logo-card [pictureUrl]="'assets/images/programming-logos/Java.svg'" [text]="'Java'"></app-logo-card>
+    <div class="grow">
+      <p class="mx-3 text-off-black text-xl break-normal lg:mt-0 mt-3" i18n>
+        Je place Java à part car nous avons pu réaliser de nombreuses applications en Java durant mes études. C’est un des langages orienté objet que je manipule le mieux.
+      </p>
+    </div>
+  </div>
+  <div class="flex flex-row lg:flex-nowrap flex-wrap justify-around items-center -mx-3 mt-3">
+    <app-logo-card [pictureUrl]="'assets/images/programming-logos/C++.svg'" [text]="'C++'"></app-logo-card>
+    <app-logo-card [pictureUrl]="'assets/images/programming-logos/QT.svg'" [text]="'QT'"></app-logo-card>
+    <app-logo-card [pictureUrl]="'assets/images/programming-logos/OpenCV.png'" [text]="'Open CV'"></app-logo-card>
+    <div class="grow">
+      <p class="mx-3 text-off-black text-xl break-normal lg:mt-0 mt-3" i18n>
+        Enfin, j’ai beaucoup d’expérience avec le C++ et QT grâce au stage que j’ai effectué en Italie au sein de General Medical Merate. Je place la librairie OpenCV dans cette catégorie car c’est en  C++ que je l’ai utilisée.
+      </p>
+    </div>
+  </div>
+
+  <!-- Secondary languages -->
+  <h2 class="md:text-3xl sm:text-2xl text-xl font-extrabold text-gradient from-cyan-green to-cyan-blue mt-20" i18n>J'ai de l'expérience</h2>
+  <div>
+    <div class="flex flex-row flex-wrap justify-around items-center -mx-3">
+      <app-logo-card [pictureUrl]="'assets/images/programming-logos/Vue.svg'" [text]="'Vue.js'"></app-logo-card>
+      <app-logo-card [pictureUrl]="'assets/images/programming-logos/Jest.png'" [text]="'Jest'"></app-logo-card>
+      <app-logo-card [pictureUrl]="'assets/images/programming-logos/Jasmine.svg'" [text]="'Jasmine'"></app-logo-card>
+      <app-logo-card [pictureUrl]="'assets/images/programming-logos/Istanbul.png'" [text]="'Istanbul'"></app-logo-card>
+      <app-logo-card [pictureUrl]="'assets/images/programming-logos/Karma.png'" [text]="'Karma'"></app-logo-card>
+      <app-logo-card [pictureUrl]="'assets/images/programming-logos/Python.svg'" [text]="'Python'"></app-logo-card>
+      <app-logo-card [pictureUrl]="'assets/images/programming-logos/C.svg'" [text]="'C'"></app-logo-card>
+    </div>
+    <p class="mt-3 text-off-black text-xl" i18n>
+      J’ai pu me constituer une certaine expérience avec les langages et librairies de cette section au travers de mes études et de petits projets. Je n’ai toutefois pas encore eu l’occasion de les utiliser dans des projets de plus grande envergure.
+    </p>
+  </div>
+  <div class="grid 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10 -mx-3">
+    <app-logo-card [pictureUrl]="'assets/images/programming-logos/Bash.svg'" [text]="'Bash'" [fixedSize]="false">
+      <p class="mb-auto" i18n>Utilisant un OS basé sur UNIX au quotidien, et WSL couramment sous Windows, j’ai souvent l’occasion de manipuler la ligne de commande, et notamment les terminaux Bash et Zsh. J’ai pu réaliser de nombreux scripts pour faciliter certaines tâches.</p>
+    </app-logo-card>
+    <app-logo-card [pictureUrl]="'assets/images/programming-logos/Matlab.png'" [text]="'Matlab'" [fixedSize]="false">
+      <p class="mb-auto" i18n>Je me suis servi de Matlab à plusieurs reprises durant mes études, mais j’ai principalement pu me servir de ce langage pour prototyper rapidement des solutions lors de mon stage chez General Medical Merate.</p>
+    </app-logo-card>
+    <app-logo-card [pictureUrl]="'assets/images/programming-logos/Latex.svg'" [text]="'LaTeX'" [fixedSize]="false">
+      <p class="mb-auto" i18n>Mon cursus d’ingénieur a laissé la part belle aux mathématiques et à la physique, notamment durant les années de classe préparatoire. De fait, je me suis souvent servi de LaTeX pour rédiger mes rapports.</p>
+    </app-logo-card>
+    <app-logo-card [pictureUrl]="'assets/images/programming-logos/Markdown.svg'" [text]="'Markdown'" [fixedSize]="false">
+      <p class="mb-auto" i18n>J’utilise Markdown au quotidien pour la prise de note sur ordinateur. Je trouve ce système de formatage simple et intuitif.</p>
+    </app-logo-card>
+    <app-logo-card [pictureUrl]="'assets/images/programming-logos/UML.png'" [text]="'UML'" [fixedSize]="false">
+      <p class="mb-auto" i18n>La réalisation de diagrammes UML est une étape importante de la conception de mes projets, et j’utilise souvent cette représentation graphique pour modéliser clairement des systèmes complexes.</p>
+    </app-logo-card>
+  </div>
+
+  <!-- Languages I used a bit -->
+  <h2 class="md:text-3xl sm:text-2xl text-xl font-extrabold text-gradient from-cyan-green to-cyan-blue mt-20" i18n>Je les ai utilisés</h2>
+  <div>
+    <div class="flex flex-row flex-wrap justify-around items-center -mx-3">
+      <app-logo-card [pictureUrl]="'assets/images/programming-logos/Dart.png'" [text]="'Dart'"></app-logo-card>
+      <app-logo-card [pictureUrl]="'assets/images/programming-logos/Flutter.png'" [text]="'Flutter'"></app-logo-card>
+      <app-logo-card [pictureUrl]="'assets/images/programming-logos/Ocaml.png'" [text]="'OCaml'"></app-logo-card>
+      <app-logo-card [pictureUrl]="'assets/images/programming-logos/CSharp.svg'" [text]="'C#'"></app-logo-card>
+    </div>
+    <p class="mt-3 text-off-black text-xl" i18n>
+      J’ai déjà manipulé ces langages par le passé. Bien que je serais capable de rapidement me former, je ne les considère pas comme des langages où je suis très expérimenté.
+    </p>
+  </div>
+
+</div>

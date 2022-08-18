@@ -3,10 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import {LandingPageComponent} from "./components/pages/landing-page/landing-page.component";
 import {NotFoundComponent} from "./components/general/not-found/not-found.component";
 import {LegalComponent} from "./components/pages/legal/legal.component";
+import {SkillsComponent} from "./components/pages/skills/skills.component";
 
 const routes: Routes = [
   {path: '', component: LandingPageComponent},
   {path: 'legal', component: LegalComponent},
+  {path: 'competences', component: SkillsComponent},
   {path: '**', component: NotFoundComponent}
 ];
 

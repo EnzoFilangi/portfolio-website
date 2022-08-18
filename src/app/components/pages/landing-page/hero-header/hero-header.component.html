@@ -4,7 +4,8 @@
   <h1 class="text-6xl font-bold font-mono text-off-white tracking-wider mb-2 mx-2 md:m-0">Enzo Filangi</h1>
   <div class="px-3 sm:p-0 my-2">
     <h1 class="text-xl md:text-3xl font-light font-mono text-off-white tracking-wider sm:mx-5">M1 Software Engineering - Efrei Paris</h1>
-    <div class="h-1.5 w-full mt-2 mb-5 rounded-full bg-gradient-to-r from-red to-orange w-full glow-orange-animated animation-infinite-3s"></div>
+    <!-- Use a div for the horizontal bar and not <hr> to style it more easily -->
+    <div class="h-1.5 w-full mt-2 mb-5 rounded-full bg-gradient-to-r from-red to-orange glow-orange-animated animation-infinite-3s"></div>
     <div class="w-full flex flex-row justify-around items-center text-off-white">
       <div class="relative">
         <fa-icon [icon]="mailIcon" size="3x" class="cursor-pointer" (click)="copyEmail()"></fa-icon>

@@ -14,6 +14,8 @@ import { ProfessionalExperienceListComponent } from './components/pages/landing-
 import { AssociativeExperienceListComponent } from './components/pages/landing-page/associative-experience-list/associative-experience-list.component';
 import { FeaturedProjectsComponent } from './components/pages/landing-page/featured-projects/featured-projects.component';
 import { LegalComponent } from './components/pages/legal/legal.component';
+import { SkillsComponent } from './components/pages/skills/skills.component';
+import { LogoCardComponent } from './components/pages/skills/logo-card/logo-card.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { LegalComponent } from './components/pages/legal/legal.component';
     ProfessionalExperienceListComponent,
     AssociativeExperienceListComponent,
     FeaturedProjectsComponent,
-    LegalComponent
+    LegalComponent,
+    SkillsComponent,
+    LogoCardComponent
   ],
   imports: [
     BrowserModule,
