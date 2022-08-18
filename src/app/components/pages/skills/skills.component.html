@@ -45,7 +45,7 @@
     <app-logo-card [pictureUrl]="'assets/images/programming-logos/Java.svg'" [text]="'Java'"></app-logo-card>
     <div class="grow">
       <p class="mx-3 text-off-black text-xl break-normal lg:mt-0 mt-3" i18n>
-        Je place Java à part car nous avons pu réaliser de nombreuses applications en Java durant mes études. C’est un des langages orienté objet que je manipule le mieux.
+        Je place Java à part car j'ai pu l'utiliser pour réaliser de nombreuses applications durant mes études. C’est un des langages orienté objet que je manipule le mieux.
       </p>
     </div>
   </div>
@@ -108,4 +108,97 @@
     </p>
   </div>
 
+
+  <!-- Technologies and software -->
+  <h1 class="md:pb-4 pb-2 md:text-5xl sm:text-3xl text-2xl font-extrabold text-gradient from-red to-orange mt-20" i18n>Technologies et logiciels</h1>
+  <!-- Main technos -->
+  <h2 class="md:text-3xl sm:text-2xl text-xl font-extrabold text-gradient from-cyan-green to-cyan-blue" i18n>Je maîtrise</h2>
+  <div>
+    <div class="flex flex-row flex-wrap justify-around items-center -mx-3">
+      <app-logo-card [pictureUrl]="'assets/images/software-logos/ubuntu.svg'" [text]="'Ubuntu'"></app-logo-card>
+      <app-logo-card [pictureUrl]="'assets/images/software-logos/debian.svg'" [text]="'Debian'"></app-logo-card>
+      <app-logo-card [pictureUrl]="'assets/images/software-logos/macOS.svg'" [text]="'macOS'"></app-logo-card>
+      <app-logo-card [pictureUrl]="'assets/images/software-logos/windows.svg'" [text]="'Windows'"></app-logo-card>
+    </div>
+    <p class="mt-3 text-off-black text-xl" i18n>
+      Je me sers des trois principaux systèmes d'exploitation régulièrement. Au quotidien, j'utilise une machine macOS. Pour jouer, un PC Windows. Et pour faire fonctionner mon serveur, une distribution Linux. Ainsi, je suis capable de passer rapidement et facilement de l'un à l'autre, et suis à l'aise à la fois dans un environnement graphique ou en ligne de commande.
+    </p>
+  </div>
+  <div class="flex flex-row lg:flex-nowrap flex-wrap justify-around items-center -mx-3 mt-3">
+    <app-logo-card [pictureUrl]="'assets/images/software-logos/mysql.svg'" [text]="'MySQL'"></app-logo-card>
+    <app-logo-card [pictureUrl]="'assets/images/software-logos/postgresql.svg'" [text]="'PostgreSQL'"></app-logo-card>
+    <div class="grow">
+      <p class="mx-3 text-off-black text-xl break-normal lg:mt-0 mt-3" i18n>
+        Pour mes projets nécessitant du stockage structuré à long terme, j'ai pu utiliser aussi bien MySQL que PostgreSQL. Ainsi, je peux m'adapter à différentes technologies de SGBDR. J'ai également expérimenté avec des bases de données NoSQL, mais ne m'en suis pas encore servir dans un projet conséquent.
+      </p>
+    </div>
+  </div>
+  <div class="flex flex-row lg:flex-nowrap flex-wrap justify-around items-center -mx-3 mt-3">
+    <app-logo-card [pictureUrl]="'assets/images/software-logos/jetbrains.svg'" [text]="'IDE Jetbrains'"></app-logo-card>
+    <app-logo-card [pictureUrl]="'assets/images/software-logos/vscode.svg'" [text]="'VS Code'"></app-logo-card>
+    <div class="grow">
+      <p class="mx-3 text-off-black text-xl break-normal lg:mt-0 mt-3" i18n>
+        À titre personnel, j'utilise les IDE de la suite Jetbrains (IntelliJ, Webstorm, etc) pour la grande majorité de mes projets, car je préfère un logiciel tout-en-un. Visual Studio Code a toutefois une place importante dans ma façon de travailler, lorsque je planche sur des tâches plus "légères" telles qu'un script Bash, l'édition de fichiers JSON/YML, et ainsi de suite. Je sais également me servir d'IDE plus spécifiques en fonction des stacks tels que QT Creator.
+      </p>
+    </div>
+  </div>
+  <div class="flex flex-row lg:flex-nowrap flex-wrap justify-around items-center -mx-3 mt-3">
+    <app-logo-card [pictureUrl]="'assets/images/software-logos/git.png'" [text]="'git'"></app-logo-card>
+    <app-logo-card [pictureUrl]="'assets/images/software-logos/github.png'" [text]="'GitHub'"></app-logo-card>
+    <div class="grow">
+      <p class="mx-3 text-off-black text-xl break-normal lg:mt-0 mt-3" i18n>
+        J'utilise git sur tous mes projets, c'est un outil indispensable à mon sens. Je me sers également de GitHub pour héberger mon code sur tous ces projets.
+      </p>
+    </div>
+  </div>
+  <div class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10">
+    <app-logo-card [pictureUrl]="'assets/images/software-logos/nodejs.svg'" [text]="'Node.js'" [fixedSize]="false">
+      <p class="mb-auto" i18n>J'ai pu manipuler Node.js sur de nombreux projets, qu'il s'agisse de réaliser des applications backend ou juste faire tourner des scripts JavaScript.</p>
+    </app-logo-card>
+    <app-logo-card [pictureUrl]="'assets/images/software-logos/figma.svg'" [text]="'Figma'" [fixedSize]="false">
+      <p class="mb-auto" i18n>J'ai découvert Figma en cherchant comment réaliser les maquettes de mes différents projets, et je m'en sers depuis dès que j'ai besoin de créer un design. N'étant pas UI/UX designer de formation, je ne peux qu'apprécier la simplicité et la versatilité de cet outil.</p>
+    </app-logo-card>
+    <app-logo-card [pictureUrl]="'assets/images/software-logos/office.svg'" [text]="'Microsoft Office'" [fixedSize]="false">
+      <p class="mb-auto" i18n>Que ce soit pour rédiger des rapports de projets, des tableaux complexes ou préparer des présentations, je me sers de la suite Office depuis des années. J'utilise également les outils équivalents de Google Workspace dont je trouve les fonctionnalités de collaboration plus poussées. Mention également à Obsidian que j'utilise pour prendre des notes en Markdown, et Notability dont je me sers pour écrire sur iPad.</p>
+    </app-logo-card>
+  </div>
+
+  <!-- Secondary technos -->
+  <h2 class="md:text-3xl sm:text-2xl text-xl font-extrabold text-gradient from-cyan-green to-cyan-blue mt-20" i18n>J'ai de l'expérience</h2>
+  <div>
+    <div class="flex flex-row flex-wrap justify-around items-center -mx-3">
+      <app-logo-card [pictureUrl]="'assets/images/software-logos/vagrant.png'" [text]="'Vagrant'"></app-logo-card>
+      <app-logo-card [pictureUrl]="'assets/images/software-logos/docker.png'" [text]="'Docker'"></app-logo-card>
+      <app-logo-card [pictureUrl]="'assets/images/software-logos/docker-compose.png'" [text]="'Docker compose'"></app-logo-card>
+      <app-logo-card [pictureUrl]="'assets/images/software-logos/githubCI.png'" [text]="'GitHub CI'"></app-logo-card>
+    </div>
+    <p class="mt-3 text-off-black text-xl" i18n>
+      Cherchant à expérimenter avec le processus DevOps, j'ai pu apprendre ces technologies afin d'aisément conteneuriser et déployer des applications. Ce site, notamment, est déployé grâce à Docker et Docker compose.
+    </p>
+  </div>
+  <div class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 mt-10">
+    <app-logo-card [pictureUrl]="'assets/images/software-logos/electron.svg'" [text]="'Electron'" [fixedSize]="false">
+      <p class="mb-auto" i18n>J'ai pu expérimenter avec Electron lors du projet Medchain. Cette technologie nous a permis très facilement de transposer notre savoir-faire dans le navigateur à une application de bureau.</p>
+    </app-logo-card>
+    <app-logo-card [pictureUrl]="'assets/images/software-logos/nginx.svg'" [text]="'Nginx'" [fixedSize]="false">
+      <p class="mb-auto" i18n>Nginx m'a été très utile pour configurer facilement les serveurs de différents projets. Bien que je ne sois pas un expert réseau, j'ai tout de même pu déployer des applications sans trop de difficultés.</p>
+    </app-logo-card>
+    <app-logo-card [pictureUrl]="'assets/images/software-logos/oracle.png'" [text]="'Oracle Database'" [fixedSize]="false">
+      <p class="mb-auto" i18n>Je me suis servi d'Oracle Database dans mes études, notamment lors de cours de gestion de base de données avec l'utilisation de PL/SQL. Bien qu'il s'agisse d'un logiciel complexe, j'ai pu en saisir la pertinence sur des systèmes à l'échelle d'entreprises.</p>
+    </app-logo-card>
+  </div>
+
+  <!-- Technos I used a bit -->
+  <h2 class="md:text-3xl sm:text-2xl text-xl font-extrabold text-gradient from-cyan-green to-cyan-blue mt-20" i18n>Je les ai utilisés</h2>
+  <div class="grid lg:w-3/4 mx-auto xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10">
+    <app-logo-card [pictureUrl]="'assets/images/software-logos/firebase.png'" [text]="'Firebase'" [fixedSize]="false">
+      <p class="mb-auto" i18n>Durant un projet de Cloud, nous avons utilisé Firebase et Firestore afin de découvrir l'utilisation d'un stack FaaS.</p>
+    </app-logo-card>
+    <app-logo-card [pictureUrl]="'assets/images/software-logos/activemq.png'" [text]="'ActiveMQ'" [fixedSize]="false">
+      <p class="mb-auto" i18n>J'ai pu utiliser ActiveMQ sur un projet académique afin de synchroniser et faire communiquer plusieurs applications.</p>
+    </app-logo-card>
+    <app-logo-card [pictureUrl]="'assets/images/software-logos/davinci-resolve.svg'" [text]="'DaVinci Resolve'" [fixedSize]="false">
+      <p class="mb-auto" i18n>DaVinci Resolve est un logiciel de montage vidéo. Je m'en suis servi pour réaliser plusieurs vidéos, à la fois pour présenter des projets mais également pour mener des interviews.</p>
+    </app-logo-card>
+  </div>
 </div>
