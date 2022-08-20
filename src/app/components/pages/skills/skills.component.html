@@ -3,7 +3,7 @@
   <div class="w-full flex flex-row justify-between items-center">
     <div class="grow h-1.5 rounded-full bg-gradient-to-r from-red to-orange"></div>
     <h1 class="mx-5 text-off-white lg:text-7xl md:text-5xl sm:text-3xl text-xl font-extrabold" i18n>Mes compétences</h1>
-    <div class="grow h-1.5 rounded-full bg-gradient-to-r from-red to-orange"></div>
+    <div class="grow h-1.5 rounded-full bg-gradient-to-r from-orange to-red"></div>
   </div>
   <p class="w-full sm:pl-10 mt-5 md:text-xl sm:text-base text-sm text-off-white" i18n>
     Au cours de mes projets, stages, et expériences diverses j’ai pu acquérir un ensemble de compétences variées.<br>
@@ -14,9 +14,9 @@
 <!-- Main content -->
 <div class="sm:w-4/5 w-full mx-auto sm:px-0 px-5 flex flex-col justify-start my-10">
   <!-- Programming languages -->
-  <h1 class="md:pb-4 pb-2 md:text-5xl sm:text-3xl text-2xl font-extrabold text-gradient from-red to-orange" i18n>Langages, frameworks et librairies</h1>
+  <h1 class="big-title text-gradient gradient-orange" i18n>Langages, frameworks et librairies</h1>
   <!-- Main languages -->
-  <h2 class="md:text-3xl sm:text-2xl text-xl font-extrabold text-gradient from-cyan-green to-cyan-blue" i18n>Je maîtrise</h2>
+  <h2 class="small-title text-gradient gradient-blue" i18n>Je maîtrise</h2>
   <div>
     <div class="flex flex-row flex-wrap justify-around items-center -mx-3">
       <app-logo-card [pictureUrl]="'assets/images/programming-logos/HTML5.svg'" [text]="'HTML 5'"></app-logo-card>
@@ -28,7 +28,7 @@
       <app-logo-card [pictureUrl]="'assets/images/programming-logos/Tailwind.jpg'" [text]="'Tailwind CSS'"></app-logo-card>
       <app-logo-card [pictureUrl]="'assets/images/programming-logos/Expressjs.png'" [text]="'express'"></app-logo-card>
     </div>
-    <p class="mt-3 text-off-black text-xl" i18n>
+    <p class="mt-3 paragraph-text" i18n>
       Le développement web étant mon domaine de compétence principal, je maîtrise bien les langages et frameworks qui y sont employés. J’ai pu réaliser de nombreux projets en utilisant ces technologies, aussi bien côté frontend que backend.
     </p>
   </div>
@@ -36,7 +36,7 @@
     <app-logo-card [pictureUrl]="'assets/images/programming-logos/SQL.jpg'" [text]="'SQL'"></app-logo-card>
     <app-logo-card [pictureUrl]="'assets/images/programming-logos/PL-SQL.png'" [text]="'PL/SQL'"></app-logo-card>
     <div class="grow">
-      <p class="mx-3 text-off-black text-xl break-normal lg:mt-0 mt-3" i18n>
+      <p class="mx-3 paragraph-text break-normal lg:mt-0 mt-3" i18n>
         Le langage SQL étant le standard de la manipulation de données, il était indispensable pour moi de le maîtriser. J’ai également eu l’occasion de réaliser des bases de données plus intelligente en utilisant le PL/SQL pour mieux automatiser la gestion de la base de données.
       </p>
     </div>
@@ -44,7 +44,7 @@
   <div class="flex flex-row lg:flex-nowrap flex-wrap justify-around items-center -mx-3 mt-3">
     <app-logo-card [pictureUrl]="'assets/images/programming-logos/Java.svg'" [text]="'Java'"></app-logo-card>
     <div class="grow">
-      <p class="mx-3 text-off-black text-xl break-normal lg:mt-0 mt-3" i18n>
+      <p class="mx-3 paragraph-text break-normal lg:mt-0 mt-3" i18n>
         Je place Java à part car j'ai pu l'utiliser pour réaliser de nombreuses applications durant mes études. C’est un des langages orienté objet que je manipule le mieux.
       </p>
     </div>
@@ -54,14 +54,14 @@
     <app-logo-card [pictureUrl]="'assets/images/programming-logos/QT.svg'" [text]="'QT'"></app-logo-card>
     <app-logo-card [pictureUrl]="'assets/images/programming-logos/OpenCV.png'" [text]="'Open CV'"></app-logo-card>
     <div class="grow">
-      <p class="mx-3 text-off-black text-xl break-normal lg:mt-0 mt-3" i18n>
+      <p class="mx-3 paragraph-text break-normal lg:mt-0 mt-3" i18n>
         Enfin, j’ai beaucoup d’expérience avec le C++ et QT grâce au stage que j’ai effectué en Italie au sein de General Medical Merate. Je place la librairie OpenCV dans cette catégorie car c’est en  C++ que je l’ai utilisée.
       </p>
     </div>
   </div>
 
   <!-- Secondary languages -->
-  <h2 class="md:text-3xl sm:text-2xl text-xl font-extrabold text-gradient from-cyan-green to-cyan-blue mt-20" i18n>J'ai de l'expérience</h2>
+  <h2 class="small-title text-gradient gradient-blue mt-20" i18n>J'ai de l'expérience</h2>
   <div>
     <div class="flex flex-row flex-wrap justify-around items-center -mx-3">
       <app-logo-card [pictureUrl]="'assets/images/programming-logos/Vue.svg'" [text]="'Vue.js'"></app-logo-card>
@@ -73,7 +73,7 @@
       <app-logo-card [pictureUrl]="'assets/images/programming-logos/Matlab.png'" [text]="'Matlab'"></app-logo-card>
       <app-logo-card [pictureUrl]="'assets/images/programming-logos/C.svg'" [text]="'C'"></app-logo-card>
     </div>
-    <p class="mt-3 text-off-black text-xl" i18n>
+    <p class="mt-3 paragraph-text" i18n>
       J’ai pu me constituer une certaine expérience avec les langages et librairies de cette section au travers de mes études et de petits projets. Je n’ai toutefois pas encore eu l’occasion de les utiliser dans des projets de plus grande envergure.
     </p>
   </div>
@@ -93,7 +93,7 @@
   </div>
 
   <!-- Languages I used a bit -->
-  <h2 class="md:text-3xl sm:text-2xl text-xl font-extrabold text-gradient from-cyan-green to-cyan-blue mt-20" i18n>Je les ai utilisés</h2>
+  <h2 class="small-title text-gradient gradient-blue mt-20" i18n>Je les ai utilisés</h2>
   <div>
     <div class="flex flex-row flex-wrap justify-around items-center -mx-3">
       <app-logo-card [pictureUrl]="'assets/images/programming-logos/Dart.png'" [text]="'Dart'"></app-logo-card>
@@ -101,16 +101,16 @@
       <app-logo-card [pictureUrl]="'assets/images/programming-logos/Ocaml.png'" [text]="'OCaml'"></app-logo-card>
       <app-logo-card [pictureUrl]="'assets/images/programming-logos/CSharp.svg'" [text]="'C#'"></app-logo-card>
     </div>
-    <p class="mt-3 text-off-black text-xl" i18n>
+    <p class="mt-3 paragraph-text" i18n>
       J’ai déjà manipulé ces langages par le passé. Bien que je serais capable de rapidement me former, je ne les considère pas comme des langages où je suis très expérimenté.
     </p>
   </div>
 
 
   <!-- Technologies and software -->
-  <h1 class="md:pb-4 pb-2 md:text-5xl sm:text-3xl text-2xl font-extrabold text-gradient from-red to-orange mt-20" i18n>Technologies et logiciels</h1>
+  <h1 class="big-title text-gradient gradient-orange mt-20" i18n>Technologies et logiciels</h1>
   <!-- Main technos -->
-  <h2 class="md:text-3xl sm:text-2xl text-xl font-extrabold text-gradient from-cyan-green to-cyan-blue" i18n>Je maîtrise</h2>
+  <h2 class="small-title text-gradient gradient-blue" i18n>Je maîtrise</h2>
   <div>
     <div class="flex flex-row flex-wrap justify-around items-center -mx-3">
       <app-logo-card [pictureUrl]="'assets/images/software-logos/ubuntu.svg'" [text]="'Ubuntu'"></app-logo-card>
@@ -118,7 +118,7 @@
       <app-logo-card [pictureUrl]="'assets/images/software-logos/macOS.svg'" [text]="'macOS'"></app-logo-card>
       <app-logo-card [pictureUrl]="'assets/images/software-logos/windows.svg'" [text]="'Windows'"></app-logo-card>
     </div>
-    <p class="mt-3 text-off-black text-xl" i18n>
+    <p class="mt-3 paragraph-text" i18n>
       Je me sers des trois principaux systèmes d'exploitation régulièrement. Au quotidien, j'utilise une machine macOS. Pour jouer, un PC Windows. Et pour faire fonctionner mon serveur, une distribution Linux. Ainsi, je suis capable de passer rapidement et facilement de l'un à l'autre, et suis à l'aise à la fois dans un environnement graphique ou en ligne de commande.
     </p>
   </div>
@@ -126,7 +126,7 @@
     <app-logo-card [pictureUrl]="'assets/images/software-logos/mysql.svg'" [text]="'MySQL'"></app-logo-card>
     <app-logo-card [pictureUrl]="'assets/images/software-logos/postgresql.svg'" [text]="'PostgreSQL'"></app-logo-card>
     <div class="grow">
-      <p class="mx-3 text-off-black text-xl break-normal lg:mt-0 mt-3" i18n>
+      <p class="mx-3 paragraph-text break-normal lg:mt-0 mt-3" i18n>
         Pour mes projets nécessitant du stockage structuré à long terme, j'ai pu utiliser aussi bien MySQL que PostgreSQL. Ainsi, je peux m'adapter à différentes technologies de SGBDR. J'ai également expérimenté avec des bases de données NoSQL, mais ne m'en suis pas encore servir dans un projet conséquent.
       </p>
     </div>
@@ -135,7 +135,7 @@
     <app-logo-card [pictureUrl]="'assets/images/software-logos/jetbrains.svg'" [text]="'IDE Jetbrains'"></app-logo-card>
     <app-logo-card [pictureUrl]="'assets/images/software-logos/vscode.svg'" [text]="'VS Code'"></app-logo-card>
     <div class="grow">
-      <p class="mx-3 text-off-black text-xl break-normal lg:mt-0 mt-3" i18n>
+      <p class="mx-3 paragraph-text break-normal lg:mt-0 mt-3" i18n>
         À titre personnel, j'utilise les IDE de la suite Jetbrains (IntelliJ, Webstorm, etc) pour la grande majorité de mes projets, car je préfère un logiciel tout-en-un. Visual Studio Code a toutefois une place importante dans ma façon de travailler, lorsque je planche sur des tâches plus "légères" telles qu'un script Bash, l'édition de fichiers JSON/YML, et ainsi de suite. Je sais également me servir d'IDE plus spécifiques en fonction des stacks tels que QT Creator.
       </p>
     </div>
@@ -144,7 +144,7 @@
     <app-logo-card [pictureUrl]="'assets/images/software-logos/git.png'" [text]="'git'"></app-logo-card>
     <app-logo-card [pictureUrl]="'assets/images/software-logos/github.png'" [text]="'GitHub'"></app-logo-card>
     <div class="grow">
-      <p class="mx-3 text-off-black text-xl break-normal lg:mt-0 mt-3" i18n>
+      <p class="mx-3 paragraph-text break-normal lg:mt-0 mt-3" i18n>
         J'utilise git sur tous mes projets, c'est un outil indispensable à mon sens. Je me sers également de GitHub pour héberger mon code sur tous ces projets.
       </p>
     </div>
@@ -162,7 +162,7 @@
   </div>
 
   <!-- Secondary technos -->
-  <h2 class="md:text-3xl sm:text-2xl text-xl font-extrabold text-gradient from-cyan-green to-cyan-blue mt-20" i18n>J'ai de l'expérience</h2>
+  <h2 class="small-title text-gradient gradient-blue mt-20" i18n>J'ai de l'expérience</h2>
   <div>
     <div class="flex flex-row flex-wrap justify-around items-center -mx-3">
       <app-logo-card [pictureUrl]="'assets/images/software-logos/vagrant.png'" [text]="'Vagrant'"></app-logo-card>
@@ -170,7 +170,7 @@
       <app-logo-card [pictureUrl]="'assets/images/software-logos/docker-compose.png'" [text]="'Docker compose'"></app-logo-card>
       <app-logo-card [pictureUrl]="'assets/images/software-logos/githubCI.png'" [text]="'GitHub CI'"></app-logo-card>
     </div>
-    <p class="mt-3 text-off-black text-xl" i18n>
+    <p class="mt-3 paragraph-text" i18n>
       Cherchant à expérimenter avec le processus DevOps, j'ai pu apprendre ces technologies afin d'aisément conteneuriser et déployer des applications. Ce site, notamment, est déployé grâce à Docker et Docker compose.
     </p>
   </div>
@@ -187,7 +187,7 @@
   </div>
 
   <!-- Technos I used a bit -->
-  <h2 class="md:text-3xl sm:text-2xl text-xl font-extrabold text-gradient from-cyan-green to-cyan-blue mt-20" i18n>Je les ai utilisés</h2>
+  <h2 class="small-title text-gradient gradient-blue mt-20" i18n>Je les ai utilisés</h2>
   <div class="grid lg:w-3/4 mx-auto xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10">
     <app-logo-card [pictureUrl]="'assets/images/software-logos/firebase.png'" [text]="'Firebase'" [fixedSize]="false">
       <p class="mb-auto" i18n>Durant un projet de Cloud, nous avons utilisé Firebase et Firestore afin de découvrir l'utilisation d'un stack FaaS.</p>
@@ -202,9 +202,9 @@
 
 
   <!-- Other skills -->
-  <h1 class="md:pb-4 pb-2 md:text-5xl sm:text-3xl text-2xl font-extrabold text-gradient from-red to-orange mt-20" i18n>Autre</h1>
+  <h1 class="big-title text-gradient gradient-orange mt-20" i18n>Autre</h1>
   <!-- Languages -->
-  <h2 class="md:text-3xl sm:text-2xl text-xl font-extrabold text-gradient from-cyan-green to-cyan-blue" i18n>Langues</h2>
+  <h2 class="small-title text-gradient gradient-blue" i18n>Langues</h2>
   <div>
     <div class="grid lg:w-3/4 mx-auto xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-10">
       <app-logo-card [pictureUrl]="'assets/images/countries/france.svg'" [fixedSize]="false">
@@ -220,13 +220,13 @@
         <p class="font-mono text-center mb-auto" i18n>Italien<br><br>A1</p>
       </app-logo-card>
     </div>
-    <p class="mt-10 text-off-black text-xl" i18n>
+    <p class="mt-10 paragraph-text" i18n>
       Que ce soit durant mes études, mes loisirs, ou grâce à des voyages, j’ai pu apprendre plusieurs langues en plus du français. L’anglais est de loin la langue étrangère que je parle le mieux, mais j’ai également des notions d’espagnol et d’italien.
     </p>
   </div>
   <!-- Certificates -->
-  <h2 class="md:text-3xl sm:text-2xl text-xl font-extrabold text-gradient from-cyan-green to-cyan-blue mt-10" i18n>Certifications</h2>
-  <ul class="list-disc list-inside ml-10 font-mono text-off-black text-xl mt-5">
+  <h2 class="small-title text-gradient gradient-blue mt-10" i18n>Certifications</h2>
+  <ul class="list-disc list-inside ml-10 font-mono paragraph-text mt-5">
     <li>Permis B</li>
   </ul>
 </div>

@@ -1,0 +1,11 @@
+.big-title {
+  @apply md:pb-4 pb-2 md:text-4xl text-2xl font-extrabold
+}
+
+.small-title {
+  @apply md:text-3xl text-xl font-extrabold
+}
+
+.paragraph-text {
+ @apply text-off-black md:text-lg
+}
