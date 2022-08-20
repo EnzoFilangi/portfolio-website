@@ -1,6 +1,6 @@
-<footer class="w-full h-full bg-off-black text-off-white text-sm flex md:flex-row flex-col justify-between items-center p-4 small-top-shadow">
+<footer class="w-full h-full bg-off-black text-off-white text-sm flex md:flex-row flex-col justify-between items-center p-4 small-top-shadow md:text-left text-center">
   <!-- Contact box -->
-  <div class="basis-0 grow flex justify-start items-center">
+  <div class="basis-0 md:grow flex items-center">
     <div>
       <p class="font-bold mb-2" i18n>Contactez-moi</p>
       <div class="flex">
@@ -13,12 +13,12 @@
   </div>
 
   <!-- Copyright -->
-  <div class="basis-0 grow flex justify-center items-center">
+  <div class="basis-0 md:grow flex justify-center items-center">
     <p>© {{yearInterval}} Enzo Filangi - <span i18n>Tous droits reservés</span></p>
   </div>
 
   <!-- Legal -->
-  <div class="basis-0 grow flex justify-end items-center">
-    <a class="underline hover:text-slate-300" i18n [routerLink]="'legal'">Mentions légales</a>
+  <div class="basis-0 md:grow flex justify-end">
+    <a class="underline hover:text-slate-300" [routerLink]="'legal'" i18n>Mentions légales</a>
   </div>
 </footer>
