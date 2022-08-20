@@ -1,0 +1,19 @@
+.company-logo {
+  @apply w-[150px]
+}
+
+.company-name {
+  @apply md:text-2xl text-xl
+}
+
+.experience-title {
+  @apply md:text-xl text-lg
+}
+
+.experience-info {
+  @apply md:text-lg font-light mt-5
+}
+
+.experience-description {
+  @apply mt-5
+}

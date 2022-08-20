@@ -1,0 +1,19 @@
+.project-logo {
+  @apply md:h-32 h-24 aspect-square object-cover
+}
+
+.project-name {
+  @apply font-extrabold md:text-2xl text-xl
+}
+
+.project-date {
+  @apply md:text-xl text-lg text-blue mt-2
+}
+
+.project-description {
+  @apply md:text-base text-sm
+}
+
+.chevron {
+  @apply text-6xl
+}
