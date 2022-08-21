@@ -1,0 +1,6 @@
+services:
+  web:
+    container_name: portfolio-website
+    build: .
+    ports:
+      - "10000:80"
