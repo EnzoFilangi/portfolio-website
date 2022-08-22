@@ -2,7 +2,7 @@
 FROM node:16.14.2-alpine AS build
 WORKDIR /usr/src/app
 COPY package.json package-lock.json ./
-RUN apk add --no-cache --virtual .gyp \
+RUN apk update && apk add --no-cache --virtual .gyp \
         python3 \
         make \
         g++ \
