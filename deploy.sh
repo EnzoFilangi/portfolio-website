@@ -2,7 +2,7 @@
 set -e
 exec >> /home/enzo/logs/webhooks/portfolio/output.log 2>>/home/enzo/logs/webhooks/portfolio/output.log
 
-echo -e "\n\n"
+printf "\n\n"
 echo "###### Deploying changes ######"
 date +'%Y-%m-%d %H:%M:%S'
 
