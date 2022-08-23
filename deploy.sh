@@ -9,8 +9,9 @@ date +'%Y-%m-%d %H:%M:%S'
 cd /home/enzo/portfolio-website
 
 echo "------ Git pull ------"
-git fetch --all
-git pull
+git reset --hard HEAD # Delete all changes mades locally
+git fetch --all # Fetch the changes
+git pull # Pull the changes
 
 echo "------ Rebuilding and restarting the container ------"
 docker compose up --force-recreate --build -d
