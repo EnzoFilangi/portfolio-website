@@ -5,7 +5,7 @@
     <a class="mr-5" [routerLink]="'competences'" i18n>Compétences</a>
     <a class="mr-5" [routerLink]="'projets'" i18n>Projets</a>
     <a class="mr-5" [routerLink]="'moi'" i18n>Moi</a>
-    <img *ngIf="languageSwitcher.getCurrentLocale() !== locales.fr_FR" (click)="languageSwitcher.changeLocale(locales.fr_FR)" src="assets/images/countries/france.svg" alt="Passer en français" title="Passer en français" class="h-6 w-6 object-fill  rounded-full border border-off-white cursor-pointer">
+    <img *ngIf="languageSwitcher.getCurrentLocale() !== locales.fr_FR" (click)="languageSwitcher.changeLocale(locales.fr_FR)" src="assets/images/countries/france-square.svg" alt="Passer en français" title="Passer en français" class="h-6 w-6 object-fill rounded-full border border-off-white cursor-pointer">
     <img *ngIf="languageSwitcher.getCurrentLocale() !== locales.en_US" (click)="languageSwitcher.changeLocale(locales.en_US)" src="assets/images/countries/england.svg" alt="Switch to english" title="Switch to english" class="h-6 w-6 object-cover rounded-full border border-off-white cursor-pointer">
   </div>
 
@@ -25,7 +25,7 @@
       <a [routerLink]="'moi'" i18n><fa-icon [icon]="meIcon" class="mr-2"></fa-icon>Moi</a>
       <hr class="border-neutral-500">
       <div *ngIf="languageSwitcher.getCurrentLocale() !== locales.fr_FR" (click)="languageSwitcher.changeLocale(locales.fr_FR)" class="cursor-pointer flex flex-row items-center">
-        <img src="assets/images/countries/france.svg" alt="Passer en français" class="h-4 w-4 object-fill rounded-full border border-off-white mr-2">
+        <img src="assets/images/countries/france-square.svg" alt="Passer en français" class="h-4 w-4 object-fill rounded-full border border-off-white mr-2">
         <p>Passer en français</p>
       </div>
       <div *ngIf="languageSwitcher.getCurrentLocale() !== locales.en_US" (click)="languageSwitcher.changeLocale(locales.en_US)" class="cursor-pointer flex flex-row items-center">
