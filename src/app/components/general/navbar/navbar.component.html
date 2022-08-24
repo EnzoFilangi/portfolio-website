@@ -1,12 +1,15 @@
 <nav class="w-full h-16 sticky top-0 bg-off-black flex flex-row justify-between items-center sm:px-10 px-2 duration-500 ease-out z-[500]" #navbar>
   <a class="text-2xl font-bold text-off-white" [routerLink]="''">Enzo Filangi</a>
-  <div class="flex justify-between text-off-white uppercase text-sm hidden sm:block">
+
+  <div class="hidden sm:flex justify-between items-center text-off-white uppercase text-sm">
     <a class="mr-5" [routerLink]="'competences'" i18n>Compétences</a>
     <a class="mr-5" [routerLink]="'projets'" i18n>Projets</a>
-    <a [routerLink]="'moi'" i18n>Moi</a>
-    <button class="h-4 w-4 bg-amber-500" (click)="languageSwitcher.changeLocale(locales.fr_FR)">go to fr</button>
-    <button class="h-4 w-4 bg-red" (click)="languageSwitcher.changeLocale(locales.en_US)">go to en</button>
+    <a class="mr-5" [routerLink]="'moi'" i18n>Moi</a>
+    <img *ngIf="languageSwitcher.getCurrentLocale() !== locales.fr_FR" (click)="languageSwitcher.changeLocale(locales.fr_FR)" src="assets/images/countries/france.svg" alt="Passer en français" title="Passer en français" class="h-6 w-6 object-fill  rounded-full border border-off-white cursor-pointer">
+    <img *ngIf="languageSwitcher.getCurrentLocale() !== locales.en_US" (click)="languageSwitcher.changeLocale(locales.en_US)" src="assets/images/countries/england.svg" alt="Switch to english" title="Switch to english" class="h-6 w-6 object-cover rounded-full border border-off-white cursor-pointer">
   </div>
+
+  <!-- Mobile menu -->
   <div class="relative sm:hidden">
     <!-- Button appearing only on mobile to display the navigation menu -->
     <button (click)="toggleNavigationMenu()" class="bg-neutral-800 border border-neutral-500 rounded h-12 w-12 text-off-white sm:hidden" #navigationMenuButton>
