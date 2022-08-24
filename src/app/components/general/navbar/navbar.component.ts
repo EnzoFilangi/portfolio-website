@@ -1,13 +1,17 @@
-import {AfterViewInit, Component, ElementRef, HostListener, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/core';
 
 import { faBars, faUser, faBriefcase, faCrosshairs } from "@fortawesome/free-solid-svg-icons";
+import {LanguageSwitcherService} from "../../../services/languageSwitcherService/language-switcher.service";
+import {Locales} from "../../../interfaces/enums/locales";
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent implements AfterViewInit {
+export class NavbarComponent implements OnInit,AfterViewInit {
+
+  locales = Locales;
 
   hamburgerMenuIcon = faBars;
   skillsIcon = faCrosshairs;
@@ -35,7 +39,9 @@ export class NavbarComponent implements AfterViewInit {
     }
   }
 
-  constructor() {
+  constructor(
+    public languageSwitcher: LanguageSwitcherService
+  ) {
     // If on mobile, we want the shadow to always be present as we don't have enough vertical space to play with animating it
     // This doesn't refresh if the window changes height after load, but realistically this will almost never happen and
     // even if it does, the animation is not critical.
@@ -45,7 +51,13 @@ export class NavbarComponent implements AfterViewInit {
     }
   }
 
+  ngOnInit(): void {
+    // Navigate to the user's desired locale if this one isn't the right one
+    this.languageSwitcher.navigateToDesiredLocale();
+  }
+
   ngAfterViewInit(): void {
+
     // Don't wait for the user to start scrolling
     if (window.innerHeight < this.minScreenHeight) {
       this.navbar.nativeElement.classList.add('small-bottom-shadow')

@@ -4,6 +4,8 @@
     <a class="mr-5" [routerLink]="'competences'" i18n>Compétences</a>
     <a class="mr-5" [routerLink]="'projets'" i18n>Projets</a>
     <a [routerLink]="'moi'" i18n>Moi</a>
+    <button class="h-4 w-4 bg-amber-500" (click)="languageSwitcher.changeLocale(locales.fr_FR)">go to fr</button>
+    <button class="h-4 w-4 bg-red" (click)="languageSwitcher.changeLocale(locales.en_US)">go to en</button>
   </div>
   <div class="relative sm:hidden">
     <!-- Button appearing only on mobile to display the navigation menu -->
