@@ -16,6 +16,7 @@ import { FeaturedProjectsComponent } from './components/pages/landing-page/featu
 import { LegalComponent } from './components/pages/legal/legal.component';
 import { SkillsComponent } from './components/pages/skills/skills.component';
 import { LogoCardComponent } from './components/pages/skills/logo-card/logo-card.component';
+import { AboutMeComponent } from './components/pages/about-me/about-me.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { LogoCardComponent } from './components/pages/skills/logo-card/logo-card
     FeaturedProjectsComponent,
     LegalComponent,
     SkillsComponent,
-    LogoCardComponent
+    LogoCardComponent,
+    AboutMeComponent
   ],
   imports: [
     BrowserModule,

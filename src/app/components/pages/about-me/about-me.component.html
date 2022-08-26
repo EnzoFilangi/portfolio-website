@@ -1,0 +1,34 @@
+<!-- Not quite full width container -->
+<div class="md:w-4/5 w-full mx-auto md:px-0 px-5">
+  <!-- Page header -->
+  <!-- Change the top margin at the same breakpoint that we put the image on top -->
+  <div class="flex flex-row flex-wrap justify-around xl:mt-10 mt-5">
+    <!-- Image on the left if screen > xl ; on top otherwise -->
+    <div class="relative min-w-[200px] w-3/12 h-fit mb-10">
+      <img src="assets/images/Enzo.jpg" alt="Enzo Filangi" class="w-full border-4 border-[#E4A781] z-10 relative">
+      <div class="absolute w-full h-full bg-[#EDC4AB] top-5 -left-5"></div>
+    </div>
+    <!-- Take full with on xl breakpoint to put the image above the text since at that point the text is significantly taller than the image -->
+    <div class="xl:w-8/12 w-full flex flex-col">
+      <!-- Title with bar on its right -->
+      <div class="flex flex-row justify-between items-center w-full">
+        <h1 class="text-3xl font-extrabold text-gradient gradient-orange mr-5" i18n>À propos de moi</h1>
+        <!-- horizontal line -->
+        <div class="h-1.5 grow rounded-full bg-gradient-to-r from-orange to-red sm:block hidden"></div>
+      </div>
+      <!-- Subtitle -->
+      <h2 class="text-xl mt-5" i18n>Je suis Enzo Filangi, (futur) ingénieur en développement logiciel.</h2>
+      <!-- Content -->
+      <p class="sm:text-base text-sm mt-5 sm:text-justify" i18n>
+        Comme je suis sur le point de finir mes études, je cherche une porte d’entrée dans le monde professionnel. Une équipe où je pourrai atteindre mon plein potentiel, un mentor pour me guider durant ma carrière.<br>
+        <br>
+        Nous savons tous qu’une liste de compétences techniques n’est pas suffisante pour juger un candidat. S’il y a bien une leçon que mes amis devenus professionnels m’ont rapportée, c’est qu’une équipe préfère travailler avec quelqu’un de moins bon, mais plus sympa.<br>
+        <br>
+        Du coup, j’ai de la chance ! Je pense (totalement humblement) avoir des bases techniques solides, et en même temps être quelqu’un avec qui on a envie de discuter même en dehors des réunions strictement nécessaires.<br>
+        <br>
+        Alors j’ai fait cette page pour vous parler de ce que j’aime. En effet, c’est plus simple de s’intégrer à une équipe lorsque l’on partage des intérêts communs. J’espère donc qu’après avoir lu cette page, vous n’aurez plus besoin de choisir entre une personne compétente et une personne agréable.
+      </p>
+    </div>
+  </div>
+
+</div>
