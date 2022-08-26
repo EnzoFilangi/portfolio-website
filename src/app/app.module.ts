@@ -17,6 +17,7 @@ import { LegalComponent } from './components/pages/legal/legal.component';
 import { SkillsComponent } from './components/pages/skills/skills.component';
 import { LogoCardComponent } from './components/pages/skills/logo-card/logo-card.component';
 import { AboutMeComponent } from './components/pages/about-me/about-me.component';
+import { CarouselComponent } from './components/common/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { AboutMeComponent } from './components/pages/about-me/about-me.component
     LegalComponent,
     SkillsComponent,
     LogoCardComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
