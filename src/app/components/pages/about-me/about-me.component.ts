@@ -12,6 +12,34 @@ export class AboutMeComponent {
 
   carouselData: CarouselItem[] = [
     {
+      picturesNames: ["museum-histoire-naturelle.jpeg", "museum-histoire-naturelle-2.jpeg"],
+      title: {
+        fr: "Muséum d'histoire naturelle - Paris",
+        en: "Natural history museum - Paris, France"
+      }
+    },
+    {
+      picturesNames: ["Basilica-di-Santa-Maria-Maggiore.jpeg", "Basilica-di-Santa-Maria-Maggiore-2.jpeg", "Basilica-di-Santa-Maria-Maggiore-3.jpeg"],
+      title: {
+        fr: "Basilica di Santa Maria Maggiore - Bergame, Italie",
+        en: "Basilica di Santa Maria Maggiore - Bergamo, Italy"
+      }
+    },
+    {
+      picturesNames: ["sirmione.jpeg", "sirmione-2.jpeg", "sirmione-3.jpeg"],
+      title: {
+        fr: "Chateau de Sirmione - Sirmione, Italie",
+        en: "Sirmione castle - Sirmione, Italy"
+      }
+    },
+    {
+      picturesNames: ["musee-du-jouet.jpeg", "musee-du-jouet-2.jpeg", "musee-du-jouet-3.jpeg", "musee-du-jouet-4.jpeg"],
+      title: {
+        fr: "Musée du jouet - Colmar",
+        en: "Museum of toys - Colmar, France"
+      }
+    },
+    {
       picturesNames: ["ours.jpeg", "cerf.jpeg", "loup.jpeg", "temple.jpeg"],
       title: {
         fr: "Parc zoologique de Pairi Daiza - Belgique",
@@ -24,7 +52,14 @@ export class AboutMeComponent {
         fr: "Montpellier contemporain - Montpellier",
         en: "Montpellier contemporain - Montpellier, France"
       }
-    }
+    },
+    {
+      picturesNames: ["montpellier-aquarium.jpeg", "montpellier-aquarium-2.jpeg"],
+      title: {
+        fr: "Planet Ocean Montpellier - Montpellier",
+        en: "Planet Ocean Montpellier - Montpellier, France"
+      }
+    },
   ]
 
 
