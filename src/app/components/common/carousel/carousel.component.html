@@ -6,11 +6,11 @@
   >
     <div class="md:w-3/4 w-full flex flex-row justify-center items-center mb-2">
       <hr class="rounded border border-off-black grow sm:block hidden">
-      <h2 class="text-center w-fit mx-4">{{getItemTitle(carouselItem)}}</h2>
+      <h2 class="text-center w-fit md:mx-4">{{getItemTitle(carouselItem)}}</h2>
       <hr class="rounded border border-off-black grow sm:block hidden">
     </div>
 
-    <div class="relative w-full h-full flex flex-row justify-between">
+    <div class="relative w-full h-0 grow flex flex-row justify-between">
       <button class="absolute left-5 top-1/2 text-4xl text-off-white hover:scale-110 duration-100 ease-out" (click)="decrementSelected()" *ngIf="selected > 0">
         <fa-icon [icon]="chevronLeft" class="filter-thick-shadow"></fa-icon>
       </button>
