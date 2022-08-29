@@ -14,7 +14,7 @@
     <div class="relative w-full h-0 grow flex flex-row justify-between">
       <!-- Content of the slide -->
       <div *ngFor="let name of carouselItem.picturesNames" class="shrink grow basis-0 sm:mx-3 mx-0.5 first:ml-0 last:mr-0">
-        <img src="assets/images/carousel-images/{{name}}" alt="{{name}}" class="w-full h-full object-cover rounded {{activateFullSizeImages ? 'cursor-pointer hover:scale-105 duration-100 ease-out' : ''}}" #carouselImage (click)="makeFullSize(carouselImage, i)">
+        <img src="assets/images/carousel-images/{{name}}" alt="{{name}}" class="w-full h-full object-cover rounded {{activateFullSizeImages ? 'duration-100 ease-out' : ''}} {{activateFullSizeImages && !(platform.IOS || platform.ANDROID) ? 'cursor-pointer hover:scale-105' : ''}}" #carouselImage (click)="makeFullSize(carouselImage, i)">
       </div>
     </div>
   </div>

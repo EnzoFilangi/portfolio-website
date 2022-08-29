@@ -4,6 +4,7 @@ import {LanguageSwitcherService} from "../../../services/languageSwitcherService
 import {Locales} from "../../../interfaces/enums/locales";
 
 import { faChevronRight, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+import {Platform} from "@angular/cdk/platform";
 
 @Component({
   selector: 'app-carousel',
@@ -17,13 +18,14 @@ export class CarouselComponent {
 
   @Input() activateFullSizeImages: boolean = true;
   @Input() carouselData !: CarouselItem[];
-  selected: number = 1;
+  selected: number = 0;
 
   isAnimating: boolean = false;
   animationReset: number | null = null;
 
   constructor(
-    private languageSwitcherService: LanguageSwitcherService
+    private languageSwitcherService: LanguageSwitcherService,
+    public platform: Platform
   ) { }
 
   /**
@@ -112,7 +114,9 @@ export class CarouselComponent {
     // Check that the target of the click isn't contained in the button
     if (this.currentFullsizeImage) {
       this.currentFullsizeImage.classList.remove('full-size');
-      this.currentFullsizeImage.classList.add('duration-100', 'hover:scale-105');
+      if ( !(this.platform.IOS || this.platform.ANDROID) ) {
+        this.currentFullsizeImage.classList.add('duration-100', 'hover:scale-105');
+      }
       this.currentFullsizeImage = null;
     }
   }
