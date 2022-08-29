@@ -16,7 +16,7 @@ export class CarouselComponent {
   chevronRight = faChevronRight;
 
   @Input() carouselData !: CarouselItem[];
-  selected: number = 1;
+  selected: number = 0;
 
   constructor(
     private languageSwitcherService: LanguageSwitcherService
