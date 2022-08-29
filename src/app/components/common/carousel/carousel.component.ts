@@ -54,6 +54,14 @@ export class CarouselComponent {
   }
 
   /**
+   * Navigate to a specific slide, without animation
+   * @param circleI
+   */
+  navigateToSlide(circleI: number) {
+    this.selected = circleI;
+  }
+
+  /**
    * Activates the styles for the previous and next slides, and calls the given callback after the styles have been applied.
    *
    * The classes are applied only if this.isAnimating is true. Therefore, before calling the callback, we set this property to true.
