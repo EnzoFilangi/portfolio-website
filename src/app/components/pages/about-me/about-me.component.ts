@@ -1,16 +1,32 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import {CarouselItem} from "../../../interfaces/carousel-item";
 
 @Component({
   selector: 'app-about-me',
   templateUrl: './about-me.component.html',
   styleUrls: ['./about-me.component.css']
 })
-export class AboutMeComponent implements OnInit {
+export class AboutMeComponent {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  carouselData: CarouselItem[] = [
+    {
+      picturesNames: ["ours.jpeg", "cerf.jpeg", "loup.jpeg", "temple.jpeg"],
+      title: {
+        fr: "Parc zoologique de Pairi Daiza - Belgique",
+        en: "Pairi Daiza zoo - Belgium"
+      }
+    },
+    {
+      picturesNames: ["montpellier-art-moderne.jpeg", "montpellier-art-moderne-2.jpeg"],
+      title: {
+        fr: "Montpellier contemporain - Montpellier",
+        en: "Montpellier contemporain - Montpellier, France"
+      }
+    }
+  ]
+
 
   /**
    * Returns the number of weeks elasped since April 19, 2021
