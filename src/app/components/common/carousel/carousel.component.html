@@ -30,6 +30,6 @@
 
   <!-- Slide indicator -->
   <div class="absolute z-20 left-1/2 -translate-x-1/2 md:bottom-5 bottom-2 md:w-1/5 w-1/2 flex flex-row justify-around p-2 rounded-full bg-off-white thick-shadow">
-    <div class="w-2 h-2 rounded-full cursor-pointer {{circleI === selected ? 'bg-orange' : 'bg-gray-600'}}" *ngFor="let _ of carouselData; let circleI = index;" (click)="navigateToSlide(circleI)"></div>
+    <div class="w-2 h-2 rounded-full cursor-pointer duration-500 {{circleI === selected ? 'bg-orange' : 'bg-gray-600'}}" *ngFor="let _ of carouselData; let circleI = index;" (click)="navigateToSlide(circleI)"></div>
   </div>
 </div>
