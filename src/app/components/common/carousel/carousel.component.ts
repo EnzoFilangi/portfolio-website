@@ -15,8 +15,12 @@ export class CarouselComponent {
   chevronLeft = faChevronLeft;
   chevronRight = faChevronRight;
 
+  @Input() activateFullSizeImages: boolean = true;
   @Input() carouselData !: CarouselItem[];
-  selected: number = 0;
+  selected: number = 1;
+
+  isAnimating: boolean = false;
+  animationReset: number | null = null;
 
   constructor(
     private languageSwitcherService: LanguageSwitcherService
@@ -35,23 +39,53 @@ export class CarouselComponent {
     }
   }
 
+  /**
+   * Trigger the animations and move the slides
+   */
   incrementSelected(): void {
-    this.selected = Math.min(this.selected + 1, this.carouselData.length - 1);
+    this.triggerAnimations(() => this.selected = Math.min(this.selected + 1, this.carouselData.length - 1));
   }
 
+  /**
+   * Trigger the animations and move the slides
+   */
   decrementSelected(): void {
-    this.selected = Math.max(this.selected - 1, 0);
+    this.triggerAnimations(() => this.selected = Math.max(this.selected - 1, 0));
+  }
+
+  /**
+   * Activates the styles for the previous and next slides, and calls the given callback after the styles have been applied.
+   *
+   * The classes are applied only if this.isAnimating is true. Therefore, before calling the callback, we set this property to true.
+   * Then, we wait for 500ms before setting it to false. This is done to avoid cutting the animation midway.
+   *
+   * We keep track of the timeout to remove the classes in this.animationReset, if this is still set when an animation
+   * is triggered, we clear this timeout to prevent it from triggering midway through another animation.
+   * @param callback
+   */
+  triggerAnimations(callback: Function): void {
+    if (this.animationReset) {
+      clearTimeout(this.animationReset);
+      this.animationReset = null;
+    }
+    this.isAnimating = true;
+    setTimeout(callback, 10);
+    this.animationReset = setTimeout(() => this.isAnimating = false, 500);
   }
 
   currentFullsizeImage: HTMLImageElement | null = null;
   /**
    * This method is used to make an image grow to its full size when clicking on it
+   * if the image isn't currently already full size.
+   *
+   * This function does nothing if this.activateFullSizeImages is false
    * @param carouselImage
+   * @param imageContainerIndex
    */
-  makeFullSize(carouselImage: HTMLImageElement) {
-    // We checke that the clicked image is different from the currently displayed image
+  makeFullSize(carouselImage: HTMLImageElement, imageContainerIndex: number) {
+    // We check that the clicked image is different from the currently displayed image
     // to prevent it from being dismissed and then grown again
-    if (this.currentFullsizeImage != carouselImage){
+    if (this.activateFullSizeImages && this.currentFullsizeImage != carouselImage && imageContainerIndex === this.selected){
       // Wait a few ms to avoid any possible race condition with the previous image
       setTimeout(() => {
         carouselImage.classList.remove('duration-100', 'hover:scale-105');

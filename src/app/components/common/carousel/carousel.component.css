@@ -1,13 +1,34 @@
 .current {
   display: flex;
+
+  transition-duration: 400ms;
+  transition-timing-function: ease-out;
 }
 
 .previous {
-  /*display: flex;*/
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transform: translateX(-5%);
+  transition-duration: 400ms;
+  transition-timing-function: ease-out;
+
+  opacity: 0;
 }
 
 .next {
-  /*display: flex;*/
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transform: translateX(+5%);
+  transition-duration: 400ms;
+  transition-timing-function: ease-out;
+
+  opacity: 0;
 }
 
 .full-size {

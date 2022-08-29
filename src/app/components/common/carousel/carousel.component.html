@@ -1,35 +1,35 @@
-<div class="w-full h-full flex flex-row">
+<div class="relative w-full h-full flex flex-row">
   <!-- Missing flex class as it is attributed conditionnally by [ngClass] -->
-  <div class="w-full h-full flex-col justify-center items-center hidden"
+  <div class="w-full h-full flex-col justify-center items-center hidden opacity-100"
        *ngFor="let carouselItem of carouselData; let i = index"
-       [ngClass]="{'previous': i === (selected - 1), 'current': i === selected, 'next': i === (selected+1)}"
+       [ngClass]="{'previous': i === (selected - 1) && isAnimating, 'current': i === selected, 'next': i === (selected+1) && isAnimating}"
   >
     <!-- Title with bars on the side -->
     <div class="md:w-3/4 w-full flex flex-row justify-center items-center mb-2">
       <hr class="rounded border border-off-black grow sm:block hidden">
-      <h2 class="md:text-lg text-base text-center w-fit sm:mx-4">{{getItemTitle(carouselItem)}}</h2>
+      <h2 class="md:text-lg text-sm text-center w-fit sm:mx-4">{{getItemTitle(carouselItem)}}</h2>
       <hr class="rounded border border-off-black grow sm:block hidden">
     </div>
 
     <div class="relative w-full h-0 grow flex flex-row justify-between">
-      <!-- Actual content of the slide -->
+      <!-- Content of the slide -->
       <div *ngFor="let name of carouselItem.picturesNames" class="shrink grow basis-0 sm:mx-3 mx-0.5 first:ml-0 last:mr-0">
-        <img src="assets/images/carousel-images/{{name}}" alt="{{name}}" class="w-full h-full object-cover rounded filter-thick-shadow cursor-pointer hover:scale-105 duration-100 ease-out" #carouselImage (click)="makeFullSize(carouselImage)">
-      </div>
-
-      <!-- Previous slide button -->
-      <button class="absolute left-5 top-1/2 -translate-y-1/2 md:text-6xl text-2xl text-off-white hover:scale-110 duration-100 ease-out" (click)="decrementSelected()" *ngIf="selected > 0">
-        <fa-icon [icon]="chevronLeft" class="filter-precise-shadow"></fa-icon>
-      </button>
-      <!-- Next slide button -->
-      <button class="absolute right-5 top-1/2 -translate-y-1/2 md:text-6xl text-2xl text-off-white hover:scale-110 duration-100 ease-out" (click)="incrementSelected()" *ngIf="selected < (carouselData.length - 1)">
-        <fa-icon [icon]="chevronRight" class="filter-precise-shadow"></fa-icon>
-      </button>
-
-      <!-- Slide indicator -->
-      <div class="absolute left-1/2 -translate-x-1/2 bottom-3 md:w-1/5 w-1/2 flex flex-row justify-around p-2 rounded-full bg-off-white thick-shadow">
-        <div class="w-2 h-2 rounded-full {{circleI === selected ? 'bg-orange' : 'bg-gray-600'}}" *ngFor="let _ of carouselData; let circleI = index;"></div>
+        <img src="assets/images/carousel-images/{{name}}" alt="{{name}}" class="w-full h-full object-cover rounded {{activateFullSizeImages ? 'cursor-pointer hover:scale-105 duration-100 ease-out' : ''}}" #carouselImage (click)="makeFullSize(carouselImage, i)">
       </div>
     </div>
+  </div>
+
+  <!-- Previous slide button -->
+  <button class="absolute z-20 left-5 top-1/2 md:text-6xl text-2xl text-off-white hover:scale-110 duration-100 ease-out" (click)="decrementSelected()" *ngIf="selected > 0">
+    <fa-icon [icon]="chevronLeft" class="filter-precise-shadow"></fa-icon>
+  </button>
+  <!-- Next slide button -->
+  <button class="absolute z-20 right-5 top-1/2 md:text-6xl text-2xl text-off-white hover:scale-110 duration-100 ease-out" (click)="incrementSelected()" *ngIf="selected < (carouselData.length - 1)">
+    <fa-icon [icon]="chevronRight" class="filter-precise-shadow"></fa-icon>
+  </button>
+
+  <!-- Slide indicator -->
+  <div class="absolute z-20 left-1/2 -translate-x-1/2 bottom-5 md:w-1/5 w-1/2 flex flex-row justify-around p-2 rounded-full bg-off-white thick-shadow">
+    <div class="w-2 h-2 rounded-full {{circleI === selected ? 'bg-orange' : 'bg-gray-600'}}" *ngFor="let _ of carouselData; let circleI = index;"></div>
   </div>
 </div>
