@@ -54,6 +54,7 @@ export class CarouselComponent {
     if (this.currentFullsizeImage != carouselImage){
       // Wait a few ms to avoid any possible race condition with the previous image
       setTimeout(() => {
+        carouselImage.classList.remove('duration-100', 'hover:scale-105');
         carouselImage.classList.add('full-size');
         this.currentFullsizeImage = carouselImage;
       }, 10)
@@ -69,6 +70,7 @@ export class CarouselComponent {
     // Check that the target of the click isn't contained in the button
     if (this.currentFullsizeImage) {
       this.currentFullsizeImage.classList.remove('full-size');
+      this.currentFullsizeImage.classList.add('duration-100', 'hover:scale-105');
       this.currentFullsizeImage = null;
     }
   }
