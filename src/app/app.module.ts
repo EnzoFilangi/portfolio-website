@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {PlatformModule} from '@angular/cdk/platform';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,8 @@ import { FeaturedProjectsComponent } from './components/pages/landing-page/featu
 import { LegalComponent } from './components/pages/legal/legal.component';
 import { SkillsComponent } from './components/pages/skills/skills.component';
 import { LogoCardComponent } from './components/pages/skills/logo-card/logo-card.component';
+import { AboutMeComponent } from './components/pages/about-me/about-me.component';
+import { CarouselComponent } from './components/common/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -31,12 +34,15 @@ import { LogoCardComponent } from './components/pages/skills/logo-card/logo-card
     FeaturedProjectsComponent,
     LegalComponent,
     SkillsComponent,
-    LogoCardComponent
+    LogoCardComponent,
+    AboutMeComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    PlatformModule
   ],
   providers: [],
   bootstrap: [AppComponent]

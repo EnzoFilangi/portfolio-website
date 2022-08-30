@@ -4,11 +4,13 @@ import {LandingPageComponent} from "./components/pages/landing-page/landing-page
 import {NotFoundComponent} from "./components/general/not-found/not-found.component";
 import {LegalComponent} from "./components/pages/legal/legal.component";
 import {SkillsComponent} from "./components/pages/skills/skills.component";
+import {AboutMeComponent} from "./components/pages/about-me/about-me.component";
 
 const routes: Routes = [
   {path: '', component: LandingPageComponent},
   {path: 'legal', component: LegalComponent},
   {path: 'competences', component: SkillsComponent},
+  {path: 'moi', component: AboutMeComponent},
   {path: '**', component: NotFoundComponent}
 ];
 
