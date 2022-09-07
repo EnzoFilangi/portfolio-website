@@ -19,6 +19,7 @@ import { SkillsComponent } from './components/pages/skills/skills.component';
 import { LogoCardComponent } from './components/pages/skills/logo-card/logo-card.component';
 import { AboutMeComponent } from './components/pages/about-me/about-me.component';
 import { CarouselComponent } from './components/common/carousel/carousel.component';
+import { ProjectsPageComponent } from './components/pages/projects-page/projects-page.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { CarouselComponent } from './components/common/carousel/carousel.compone
     SkillsComponent,
     LogoCardComponent,
     AboutMeComponent,
-    CarouselComponent
+    CarouselComponent,
+    ProjectsPageComponent
   ],
   imports: [
     BrowserModule,
