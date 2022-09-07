@@ -1,1 +1,82 @@
-<p>projects-page works!</p>
+<!-- Page header -->
+<div class="w-full p-5 bg-off-black">
+  <div class="w-full flex flex-row justify-between items-center">
+    <div class="grow h-1.5 rounded-full bg-gradient-to-r from-red to-orange"></div>
+    <h1 class="mx-5 text-off-white lg:text-7xl md:text-5xl sm:text-3xl text-xl font-extrabold" i18n>Mes projets</h1>
+    <div class="grow h-1.5 rounded-full bg-gradient-to-r from-orange to-red"></div>
+  </div>
+  <p class="w-full sm:pl-10 mt-5 md:text-lg sm:text-base text-sm text-off-white" i18n>
+    Durant mes études, j’ai réalisé divers projets, aussi bien pour obtenir mon diplome que pour mes passes temps ou pour me constituer une expérience.<br>
+    Voici une liste non exhaustive de mes projets. Certains ont une galerie qui leur est associée, cela vous permet d'avoir une meilleure idée de ce à quoi ils ressemblent.
+  </p>
+</div>
+
+<!-- Main content -->
+<div class="xl:w-3/4 lg:w-4/5 sm:w-1/2 w-full mx-auto sm:px-0 px-5 my-10 grid lg:grid-cols-2 grid-cols-1 gap-x-20 gap-y-7">
+  <div class="bg-off-black text-off-white rounded-xl flex flex-col justify-start items-center p-5">
+    <img src="assets/favicon.png" alt="L'icône de ce site" class="w-32 h-32 object-contain" i18n-alt>
+    <h2 class="project-title" i18n>Site web portfolio</h2>
+    <p class="project-date">2022</p>
+    <p class="project-description" i18n>Recherchant à obtenir une présence en ligne plus poussée qu’un simple profil LinkedIn, j’ai réalisé ce site afin d’avoir un répertoire central de mes expériences.</p>
+  </div>
+
+  <div class="bg-off-black text-off-white rounded-xl flex flex-col justify-start items-center p-5">
+    <img src="assets/images/projects/icons/dnd.png" alt="Icône site Donjon et Dragon" class="w-32 h-32 object-contain" i18n-alt>
+    <h2 class="project-title">DnD Initiative Tracker</h2>
+    <p class="project-date">2022</p>
+    <p class="project-description" i18n>
+      Assumant le rôle de maitre du jeu dans une partie de Donjons et Dragons avec des amis, je souhaitais me simplifier la gestion de l’ordre des tours.<br>
+      J’ai donc développé cette application pour suivre automatiquement la progression des combats en jeu.
+    </p>
+    <button class="gallery-button" [routerLink]="'/galerie/dnd-tracker'">
+      Galerie
+    </button>
+  </div>
+
+  <div class="bg-off-black text-off-white rounded-xl flex flex-col justify-start items-center p-5">
+    <img src="assets/images/projects/icons/ULL-icon-no-bg.png" alt="ULL" class="w-32 h-32 object-contain">
+    <h2 class="project-title">ULL</h2>
+    <p class="project-date">2022</p>
+    <p class="project-description" i18n>ULL est une plateforme visant à ubériser le monde de l’évènementiel. Elle permet à des particuliers de rechercher et réserver facilement des prestations pour des évènements de toute taille (anniversaire, mariage...).</p>
+    <button class="gallery-button" [routerLink]="'/galerie/ull'">
+      Galerie
+    </button>
+  </div>
+
+  <div class="bg-off-black text-off-white rounded-xl flex flex-col justify-start items-center p-5">
+    <img src="assets/images/software-logos/firebase.png" alt="Firebase" class="w-32 h-32 object-contain">
+    <h2 class="project-title" i18n>Initiation à Firebase</h2>
+    <p class="project-date">2022</p>
+    <p class="project-description" i18n>Ce petit projet réalisé en cours de Cloud se présente comme un clone modeste de la plateforme de blogging Medium. Il m’a permi d’apprendre et de m’entraîner à l’approche FaaS du cloud.</p>
+  </div>
+
+  <div class="bg-off-black text-off-white rounded-xl flex flex-col justify-start items-center p-5">
+    <img src="assets/images/asianLogo.svg" alt="Asian'Efrei" class="w-32 h-32 object-contain">
+    <a href="https://asianefrei.org/" target="_blank" class="project-title underline">Asianefrei.org</a>
+    <p class="project-date">2021</p>
+    <p class="project-description" i18n>L’association Asian’Efrei cherchait à réaliser une refonte de son site web. En tant que membre et souhaitant gagner un peu plus d’expérience, j’ai accepté cette tâche.</p>
+    <button class="gallery-button" [routerLink]="'/galerie/asianefrei'">
+      Galerie
+    </button>
+  </div>
+
+  <div class="bg-off-black text-off-white rounded-xl flex flex-col justify-start items-center p-5">
+    <img src="assets/images/projects/icons/Medchain-no-bg.png" alt="Medchain" class="w-32 h-32 object-contain">
+    <h2 class="project-title">Medchain</h2>
+    <p class="project-date">2021</p>
+    <p class="project-description" i18n>Le but de Medchain est d’offrir un écosystème aux médecins, pharmaciens et patients permettant de dématérialiser les ordonnances tout en assurant la sécurité et la confidentialité des données et en éliminant tout abus d’ordonnance possible.</p>
+    <button class="gallery-button" [routerLink]="'/galerie/medchain'">
+      Galerie
+    </button>
+  </div>
+
+  <div class="bg-off-black text-off-white rounded-xl flex flex-col justify-start items-center p-5">
+    <img src="assets/images/projects/icons/Virtue.png" alt="Virtue" class="w-32 h-32 object-contain">
+    <h2 class="project-title">Virtue</h2>
+    <p class="project-date">2020</p>
+    <p class="project-description" i18n>Virtue est un réseau social visant à encourager les comportements positifs, bénéfiques et civils. L’idée est de permettre aux utilisateurs de commenter sur le profil des autres les bonnes actions qu’ils les ont vu réaliser.</p>
+    <button class="gallery-button" [routerLink]="'/galerie/virtue'">
+      Galerie
+    </button>
+  </div>
+</div>
