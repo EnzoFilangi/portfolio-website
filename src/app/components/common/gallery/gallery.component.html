@@ -1,8 +1,8 @@
-<div class="md:w-4/5 w-full md:mx-auto mx-5 flex flex-col justify-center items-center">
+<div class="md:w-4/5 w-full mx-auto px-5 flex flex-col justify-center items-center">
   <h1 class="text-4xl font-extrabold text-gradient gradient-orange my-5 py-2">{{getTitle(content)}}</h1>
   <div *ngFor="let entry of content.gallery" class="flex flex-col justify-center items-center mb-10">
-    <div class="w-1/2 flex justify-around items-center">
-      <img *ngFor="let url of entry.imagesURLs" [src]="url" [alt]="getDescription(entry)" class="object-contain rounded thick-shadow mx-1">
+    <div class="flex md:flex-nowrap flex-wrap justify-around items-center">
+      <img *ngFor="let url of entry.imagesURLs" [src]="url" [alt]="getDescription(entry)" class="max-h-[400px] max-w-[600px] object-contain rounded filter-thick-shadow px-1 md:mb-0 mb-2">
     </div>
     <p class="text-gray-700 italic mt-2">{{getDescription(entry)}}</p>
   </div>
