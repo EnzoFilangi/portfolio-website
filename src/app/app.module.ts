@@ -20,6 +20,11 @@ import { LogoCardComponent } from './components/pages/skills/logo-card/logo-card
 import { AboutMeComponent } from './components/pages/about-me/about-me.component';
 import { CarouselComponent } from './components/common/carousel/carousel.component';
 import { ProjectsPageComponent } from './components/pages/projects-page/projects-page.component';
+import { GalleryComponent } from './components/common/gallery/gallery.component';
+import { DndGalleryComponent } from './components/pages/projects-page/dnd-gallery/dnd-gallery.component';
+import { UllGalleryComponent } from './components/pages/projects-page/ull-gallery/ull-gallery.component';
+import { VirtueGalleryComponent } from './components/pages/projects-page/virtue-gallery/virtue-gallery.component';
+import { AsianGalleryComponent } from './components/pages/projects-page/asian-gallery/asian-gallery.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +43,12 @@ import { ProjectsPageComponent } from './components/pages/projects-page/projects
     LogoCardComponent,
     AboutMeComponent,
     CarouselComponent,
-    ProjectsPageComponent
+    ProjectsPageComponent,
+    GalleryComponent,
+    DndGalleryComponent,
+    UllGalleryComponent,
+    VirtueGalleryComponent,
+    AsianGalleryComponent
   ],
   imports: [
     BrowserModule,
