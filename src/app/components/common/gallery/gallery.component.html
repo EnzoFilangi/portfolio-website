@@ -2,7 +2,7 @@
   <h1 class="text-4xl font-extrabold text-gradient gradient-orange my-5 py-2">{{getTitle(content)}}</h1>
   <div *ngFor="let entry of content.gallery" class="flex flex-col justify-center items-center mb-10">
     <div class="w-1/2 flex justify-around items-center">
-      <img *ngFor="let url of entry.imagesURLs" [src]="url" [alt]="getDescription(entry)" class="object-contain rounded thick-shadow">
+      <img *ngFor="let url of entry.imagesURLs" [src]="url" [alt]="getDescription(entry)" class="object-contain rounded thick-shadow mx-1">
     </div>
     <p class="text-gray-700 italic mt-2">{{getDescription(entry)}}</p>
   </div>
