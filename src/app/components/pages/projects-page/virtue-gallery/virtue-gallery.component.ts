@@ -19,13 +19,13 @@ export class VirtueGalleryComponent {
       },
       {
         imagesURLs: ["assets/images/projects/gallery/virtue3.jpeg"],
-        description_fr: "L'utilisateur peut voir les avis laissés sur un profil et ceux donnés par cet utilisateur",
-        description_en: "The user can see the opinions on a profiles, and the ones given by this user"
+        description_fr: "L'utilisateur peut voir les avis laissés sur un profil et ceux donnés par ce profil",
+        description_en: "The user can see the opinions on a profile, and the ones given by the user they're viewing"
       },
       {
         imagesURLs: ["assets/images/projects/gallery/virtue4.jpeg"],
         description_fr: "Il est possible de laisser un avis sur le profil d'un autre utilisateur",
-        description_en: "Users can leave a opinion on the profile of another user"
+        description_en: "Users can leave an opinion on the profile of another user"
       },
       {
         imagesURLs: ["assets/images/projects/gallery/virtue6.jpeg", "assets/images/projects/gallery/virtue7.jpeg"],

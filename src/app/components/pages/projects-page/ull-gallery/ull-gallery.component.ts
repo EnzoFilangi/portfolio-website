@@ -39,8 +39,8 @@ export class UllGalleryComponent {
       },
       {
         imagesURLs: ["assets/images/projects/gallery/ULL10.jpeg", "assets/images/projects/gallery/ULL11.jpeg"],
-        description_fr: "Les professionnels peuvent ajouter des prestations et réorganiser l'ordre sur leur page",
-        description_en: "Providers can add new services and change the order on their page"
+        description_fr: "Les professionnels peuvent ajouter des prestations et réorganiser l'ordre d'apparition sur leur page",
+        description_en: "Providers can add new services and change the ordering on their page"
       },
       {
         imagesURLs: ["assets/images/projects/gallery/ULL12.jpeg", "assets/images/projects/gallery/ULL13.jpeg"],
@@ -75,7 +75,7 @@ export class UllGalleryComponent {
       {
         imagesURLs: ["assets/images/projects/gallery/ULL20.png"],
         description_fr: "Les particuliers peuvent consulter la page des prestataires pour réserver des prestations",
-        description_en: "Customers can see the pages of providers to book them for an event"
+        description_en: "Customers can see the profiles of providers to book them for an event"
       }
     ]
   }
