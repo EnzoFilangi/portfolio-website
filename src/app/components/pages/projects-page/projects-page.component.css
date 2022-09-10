@@ -1,0 +1,15 @@
+.project-title {
+  @apply text-4xl md:text-2xl text-center mt-1
+}
+
+.project-date {
+  @apply text-xl text-blue mt-1
+}
+
+.project-description {
+  @apply font-mono mt-3
+}
+
+.gallery-button {
+  @apply text-lg rounded mt-2 py-2 px-5 bg-orange hover:scale-105 duration-100 ease-out
+}
