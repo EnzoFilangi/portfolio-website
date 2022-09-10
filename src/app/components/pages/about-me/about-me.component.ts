@@ -69,7 +69,7 @@ export class AboutMeComponent {
    * Used to not have to update the website every week
    */
   getWorkoutWeeks(): number {
-    const originalDate = new Date("2021/04/19Z+2");
+    const originalDate = new Date("2021/04/19");
     const currentDate = new Date();
 
     return this.getWeeksBetween(originalDate, currentDate);
