@@ -1,0 +1,4 @@
+<img [src]="logoUrl" alt="{{logoUrl | linkToFilename}}" class="h-28 mx-auto my-3">
+<h1 class="text-2xl font-extrabold text-center" [innerHTML]="role"></h1> <!-- Use innerHTML to allow <br> tags -->
+<p class="text-blue text-center mb-3">{{dates}}</p>
+<p class="text-sm" [innerHTML]="description"></p>
