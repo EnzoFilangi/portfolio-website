@@ -5,73 +5,65 @@
 </h1>
 
 <div class="w-full flex flex-row flex-wrap justify-around">
-  <!-- FAP - Since there are multiple experiences in this category, we display some tilted rectangles behind to hint that there are more cards -->
-  <div class="relative min-w-[250px] max-w-[350px] grow rounded-xl bg-off-black text-off-white font-mono m-3 p-5 thick-shadow card-stack" #fapCard>
-    <img src="assets/images/fapLogo.png" alt="Fap Efrei Logo" class="h-28 mx-auto my-3">
-    <h1 class="text-2xl font-extrabold text-center" i18n>Trésorier <br>Vice-président</h1>
-    <p class="text-blue text-center mb-3" i18n>Mars 2020 - Mars 2021</p>
-    <p class="text-sm" i18n>
-      FAP Efrei - Association de formation en informatique aux séniors, enfants, personnes en situation de handicap, et personnes en réinsertion professionnelle.<br>
-      <br>
-      Gérer les fonds de l'association et son financement.<br>
-      <br>
-      Plannifier le futur de l’association. Gestion quotidienne.
-    </p>
-
-    <!--  As these are position absolute, they should render on top of everything above.
-          However, we gave the parent the .card-stack custom class which applies the "relative z-50" classes
-          to every child except div
-          Therefore, the text above renders on top of those divs
-
-          We also hide the cards on mobile as the user experience woudn't be so great
-    -->
-    <div class="xl:block hidden absolute cursor-pointer open-slightly left-0 top-0 rotate-6 w-full h-full rounded-xl bg-off-black text-off-white font-mono p-5 shadow-sm shadow-white duration-100 ease-out" #teacherCard (click)="openCard(teacherCard)">
-      <img src="assets/images/fapLogo.png" alt="Fap Efrei Logo" class="h-28 mx-auto my-3">
-      <h1 class="text-2xl font-extrabold text-center" i18n>Formateur</h1>
-      <p class="text-blue text-center mb-3" i18n>Octobre 2018 - Mars 2019</p>
-      <p class="text-sm" i18n>
-        FAP Efrei<br>
-        <br>
-        Dispenser des cours d’informatique aux séniors de la ville.
-      </p>
-    </div>
-    <div class="xl:block hidden absolute cursor-pointer open-slightly left-0 top-0 rotate-3 w-full h-full rounded-xl bg-off-black text-off-white font-mono p-5 shadow-sm shadow-white duration-100 ease-out" #eventManagerCard (click)="openCard(eventManagerCard)">
-      <img src="assets/images/fapLogo.png" alt="Fap Efrei Logo" class="h-28 mx-auto my-3">
-      <h1 class="text-2xl font-extrabold text-center" i18n>Responsable <br>des évènements</h1>
-      <p class="text-blue text-center mb-3" i18n>Mars 2019 - Mars 2020</p>
-      <p class="text-sm" i18n>
-        FAP Efrei<br>
-        <br>
-        Organiser des evènements au sein de l’école ou lors de salons pour recruter des bénévoles et faire connaître l’association.
-      </p>
-    </div>
-    <!-- Put the background back on top of the two extra cards, but below the text -->
-    <div class="xl:block hidden absolute left-0 top-0 rotate-0 w-full h-full rounded-xl bg-off-black shadow-sm shadow-white"></div>
-  </div>
-
-  <!-- Asian'Efrei -->
-  <div class="min-w-[250px] max-w-[350px] grow rounded-xl bg-off-black text-off-white font-mono m-3 p-5 thick-shadow">
-    <img src="assets/images/asianLogo.svg" alt="Asian'Efrei Logo" class="h-28 mx-auto my-3">
-    <h1 class="text-2xl font-extrabold text-center" i18n>Responsable <br>Technique</h1>
-    <p class="text-blue text-center mb-3" i18n>Mars 2021 - Mars 2023</p>
-    <p class="text-sm" i18n>
-      Asian’Efrei - Association de culture asiatique.<br>
-      <br>
-      Développer le site internet de l’association.<br>
-      <br>
-      Gérer l'infrastructure technique d’Asian’Efrei.
-    </p>
-  </div>
+  <!-- FAP -->
+  <app-association-stack class="z-50">
+    <app-card-openner>
+      <app-association-card
+        logoUrl="assets/images/fapLogo.png"
+        role="Formateur"
+        dates="Octobre 2018 - Mars 2019"
+        description="FAP Efrei<br><br>Dispenser des cours d’informatique aux séniors de la ville."
+        i18n-role i18n-dates i18n-description>
+      </app-association-card>
+    </app-card-openner>
+    <app-card-openner>
+      <app-association-card
+        logoUrl="assets/images/fapLogo.png"
+        role="Responsable <br>des évènements"
+        dates="Mars 2019 - Mars 2020"
+        description="FAP Efrei<br><br>Organiser des evènements au sein de l’école ou lors de salons pour recruter des bénévoles et faire connaître l’association."
+        i18n-role i18n-dates i18n-description>
+      </app-association-card>
+    </app-card-openner>
+    <app-card-openner>
+      <app-association-card
+        logoUrl="assets/images/fapLogo.png"
+        role="Trésorier <br>Vice-président"
+        dates="Mars 2020 - Mars 2021"
+        description="FAP Efrei - Association de formation en informatique aux séniors, enfants, personnes en situation de handicap, et personnes en réinsertion professionnelle.<br><br>Gérer les fonds de l'association et son financement.<br><br>Plannifier le futur de l’association. Gestion quotidienne."
+        i18n-role i18n-dates i18n-description>
+      </app-association-card>
+    </app-card-openner>
+  </app-association-stack>
 
   <!-- Taverne du troll -->
-  <div class="min-w-[250px] max-w-[350px] grow rounded-xl bg-off-black text-off-white font-mono m-3 p-5 thick-shadow">
-    <img src="assets/images/taverneLogo.png" alt="Taverne du Troll Logo" class="h-28 mx-auto my-3 rounded-xl">
-    <h1 class="text-2xl font-extrabold text-center" i18n>Membre</h1>
-    <p class="text-blue text-center mb-3" i18n>Septembre 2019 - Septembre 2023</p>
-    <p class="text-sm" i18n>
-      Taverne du Troll - Association de jeux sur table et de jeux de société.<br>
-      <br>
-      Participation à l’oganisation des divers évènements et tournois.
-    </p>
-  </div>
+  <app-association-stack class="z-40">
+    <app-card-openner>
+      <app-association-card
+        logoUrl="assets/images/taverneLogo.png"
+        role="Membre"
+        dates="Septembre 2019 - Septembre 2023"
+        description="Taverne du Troll<br><br>Participation à l’oganisation des divers évènements et tournois.<br><br>Animation de séances de jeu de société hebdomadaires."
+        i18n-role i18n-dates i18n-description>
+      </app-association-card>
+    </app-card-openner>
+    <app-card-openner>
+      <app-association-card
+        logoUrl="assets/images/taverneLogo.png"
+        role="Secrétaire"
+        dates="Octobre 2022 - Mars 2023"
+        description="Taverne du Troll - Association de jeux sur table et de jeux de société.<br><br>Réalisation et validation de diverses tâches administratives pour l'association.<br><br>Planification, organisation et gestion de nombreux événements réunissant plusieurs dizaines de personnes."
+        i18n-role i18n-dates i18n-description>
+      </app-association-card>
+    </app-card-openner>
+  </app-association-stack>
+
+  <!-- Asian -->
+  <app-association-card class="z-30"
+    logoUrl="assets/images/asianLogo.svg"
+    role="Responsable <br>Technique"
+    dates="Mars 2021 - Mars 2023"
+    description="Asian’Efrei - Association de culture asiatique.<br><br>Développer le site internet de l’association.<br><br>Gérer l'infrastructure technique d’Asian’Efrei."
+    i18n-role i18n-dates i18n-description>
+  </app-association-card>
 </div>
