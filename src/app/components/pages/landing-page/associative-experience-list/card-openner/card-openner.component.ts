@@ -8,13 +8,13 @@ import {Component, ElementRef, HostBinding, HostListener, OnInit} from '@angular
 export class CardOpennerComponent implements OnInit {
 
   @HostBinding('style') private hostDynamicStyle: string = '';
-  @HostBinding('class') private hostDynamicClass: string = 'slide-on-hover';
+  @HostBinding('class') private hostDynamicClass: string = 'slide-on-hover cursor-pointer';
 
   private _movementEnabled : boolean = true;
 
   public set movementEnabled(value: boolean) {
     this._movementEnabled = value;
-    this.hostDynamicClass = this.movementEnabled ? 'slide-on-hover' : '';
+    this.hostDynamicClass = this.movementEnabled ? 'slide-on-hover cursor-pointer' : '';
   }
 
   public get movementEnabled(): boolean {
@@ -34,12 +34,12 @@ export class CardOpennerComponent implements OnInit {
 
   private openCard(): void {
     if (!this._movementEnabled) return;
-    this.hostDynamicClass = 'translated-right';
+    this.hostDynamicClass = 'translated-right cursor-pointer';
   }
 
   private closeCard(): void {
     if (!this._movementEnabled) return;
-    this.hostDynamicClass = 'slide-on-hover';
+    this.hostDynamicClass = 'slide-on-hover cursor-pointer';
   }
 
   /**
