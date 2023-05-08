@@ -1,0 +1,7 @@
+<img *ngIf="iconLink" [src]="iconLink" alt="{{iconLink | linkToFilename}}" class="w-32 h-32 object-contain">
+<h2 class="text-4xl md:text-2xl text-center mt-1">{{projectTitle}}</h2>
+<p class="text-xl text-blue mt-1">{{date}}</p>
+<p class="font-mono mt-3" [innerHTML]="description"></p> <!-- Use innerHTML to make <br> tags work -->
+<button *ngIf="galleryLink" class="text-lg rounded mt-2 py-2 px-5 bg-orange hover:scale-105 duration-100 ease-out" [routerLink]="galleryLink" i18n>
+  Galerie
+</button>

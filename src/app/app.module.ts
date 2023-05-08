@@ -25,6 +25,8 @@ import { DndGalleryComponent } from './components/pages/projects-page/dnd-galler
 import { UllGalleryComponent } from './components/pages/projects-page/ull-gallery/ull-gallery.component';
 import { VirtueGalleryComponent } from './components/pages/projects-page/virtue-gallery/virtue-gallery.component';
 import { AsianGalleryComponent } from './components/pages/projects-page/asian-gallery/asian-gallery.component';
+import { ProjectCardComponent } from './components/pages/projects-page/project-card/project-card.component';
+import { LinkToFilenamePipe } from './components/pages/projects-page/project-card/link-to-filename.pipe';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import { AsianGalleryComponent } from './components/pages/projects-page/asian-ga
     DndGalleryComponent,
     UllGalleryComponent,
     VirtueGalleryComponent,
-    AsianGalleryComponent
+    AsianGalleryComponent,
+    ProjectCardComponent,
+    LinkToFilenamePipe
   ],
   imports: [
     BrowserModule,

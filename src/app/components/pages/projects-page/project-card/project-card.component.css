@@ -1,0 +1,3 @@
+:host{
+  @apply bg-off-black text-off-white rounded-xl flex flex-col justify-start items-center p-5
+}
