@@ -26,7 +26,10 @@ import { UllGalleryComponent } from './components/pages/projects-page/ull-galler
 import { VirtueGalleryComponent } from './components/pages/projects-page/virtue-gallery/virtue-gallery.component';
 import { AsianGalleryComponent } from './components/pages/projects-page/asian-gallery/asian-gallery.component';
 import { ProjectCardComponent } from './components/pages/projects-page/project-card/project-card.component';
-import { LinkToFilenamePipe } from './components/pages/projects-page/project-card/link-to-filename.pipe';
+import { LinkToFilenamePipe } from './pipes/link-to-filename.pipe';
+import { AssociationStackComponent } from './components/pages/landing-page/associative-experience-list/association-stack/association-stack.component';
+import { AssociationCardComponent } from './components/pages/landing-page/associative-experience-list/association-card/association-card.component';
+import { CardOpennerComponent } from './components/pages/landing-page/associative-experience-list/card-openner/card-openner.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +55,10 @@ import { LinkToFilenamePipe } from './components/pages/projects-page/project-car
     VirtueGalleryComponent,
     AsianGalleryComponent,
     ProjectCardComponent,
-    LinkToFilenamePipe
+    LinkToFilenamePipe,
+    AssociationStackComponent,
+    AssociationCardComponent,
+    CardOpennerComponent
   ],
   imports: [
     BrowserModule,

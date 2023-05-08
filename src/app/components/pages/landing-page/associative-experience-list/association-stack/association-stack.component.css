@@ -1,0 +1,3 @@
+:host{
+  @apply relative min-w-[250px] max-w-[350px] min-h-[500px] grow rounded-xl font-mono m-3 p-5
+}

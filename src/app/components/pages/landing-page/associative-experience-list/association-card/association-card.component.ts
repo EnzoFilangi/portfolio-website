@@ -1,4 +1,5 @@
-import {Component, HostBinding, HostListener, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+
 
 @Component({
   selector: 'app-association-card',
@@ -12,21 +13,8 @@ export class AssociationCardComponent implements OnInit {
   @Input() dates: string = "";
   @Input() description: string = "";
 
-  open: boolean = false;
-  @HostBinding('class') hostDynamicClasses: string = 'slide-on-hover'
-
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
-  }
-
-  toggleCard(): void{
-    this.open = !this.open;
-    this.hostDynamicClasses = this.open ? 'translated-right' : 'slide-on-hover'
-  }
-
-  @HostListener('click')
-  onClick(): void{
-    this.toggleCard()
   }
 }

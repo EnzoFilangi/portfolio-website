@@ -1,0 +1,12 @@
+:host{
+  @apply absolute top-0 left-0 duration-100 ease-out
+}
+
+:host(.slide-on-hover):hover {
+  left: 0.75rem; /* Change position instead of using transform as element inline style overrides css rules */
+}
+
+:host(.translated-right){
+  transition-duration: 500ms;
+  transform: translateX(105%) rotate(0deg) !important; /* Use !important to override inline style */
+}
