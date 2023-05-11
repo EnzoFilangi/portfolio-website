@@ -4,9 +4,9 @@
   <span class="text-gradient gradient-orange">Associatives</span>
 </h1>
 
-<div class="w-full flex flex-row flex-wrap justify-around">
+<div class="w-full flex flex-row flex-wrap justify-around gap-5 my-10">
   <!-- FAP -->
-  <app-association-stack class="z-50">
+  <app-association-stack class="z-50" [enableStack]="areStacksEnabled">
     <app-card-openner>
       <app-association-card
         logoUrl="assets/images/fapLogo.png"
@@ -37,7 +37,7 @@
   </app-association-stack>
 
   <!-- Taverne du troll -->
-  <app-association-stack class="z-40">
+  <app-association-stack class="z-40" [enableStack]="areStacksEnabled">
     <app-card-openner>
       <app-association-card
         logoUrl="assets/images/taverneLogo.png"

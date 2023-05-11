@@ -1,5 +1,5 @@
 :host{
-  @apply absolute top-0 left-0 duration-100 ease-out
+  @apply absolute top-0 left-0 duration-100 ease-out h-full w-full
 }
 
 :host(.slide-on-hover):hover {

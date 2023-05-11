@@ -1,4 +1,12 @@
-import {AfterContentInit, Component, ContentChildren, HostListener, QueryList} from '@angular/core';
+import {
+  AfterContentInit,
+  Component,
+  ContentChildren,
+  HostListener, Input,
+  OnChanges,
+  QueryList,
+  SimpleChanges
+} from '@angular/core';
 import {CardOpennerComponent} from "../card-openner/card-openner.component";
 
 @Component({
@@ -6,25 +14,45 @@ import {CardOpennerComponent} from "../card-openner/card-openner.component";
   templateUrl: './association-stack.component.html',
   styleUrls: ['./association-stack.component.css']
 })
-export class AssociationStackComponent implements AfterContentInit {
+export class AssociationStackComponent implements AfterContentInit, OnChanges {
 
   @ContentChildren(CardOpennerComponent) cards!: QueryList<CardOpennerComponent>;
 
+  @Input() enableStack: boolean = true;
+
   private movementEnabled: boolean = true
+  private contentInitialized: boolean = false;
 
   constructor() { }
 
   ngAfterContentInit(): void {
-    // The interface wouldn't be useable on mobile, so disable all movement
-    if (this.getScreenWidth() < 1280) {
-      this.cards.forEach(card => card.movementEnabled = false)
-      this.movementEnabled = false;
+    this.contentInitialized = true;
+    this.refreshStack()
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    const change = changes['enableStack'];
+    if (change.previousValue !== change.currentValue){
+      this.refreshStack();
+    }
+  }
+
+  private refreshStack() {
+    if (!this.contentInitialized) return;
+
+    if (this.enableStack) {
+      // Only disable the card at the top of the stack if the stack is enabled
+      this.cards.forEach(card => card.movementEnabled = true) // Reset all cards
+      this.cards.last.movementEnabled = false; // Target the last element declared in the HTML since it's the one that appears on top
+      this.movementEnabled = true;
+      this.triggerDefaultRotation();
       return;
     }
 
-    // Otherwise, only disable the card at the top of the stack
-    this.cards.last.movementEnabled = false; // Target the last element declared in the HTML since it's the one that appears on top
-    this.triggerDefaultRotation();
+    // Otherwise, disable all cards
+    this.cards.forEach(card => card.movementEnabled = false)
+    this.tiltCardsBy(0);
+    this.movementEnabled = false;
   }
 
   @HostListener('mouseleave')
@@ -42,9 +70,5 @@ export class AssociationStackComponent implements AfterContentInit {
     this.cards.forEach(
       (card, index) => card.tiltCard((this.cards.length - index - 1) * degree)
     )
-  }
-
-  private getScreenWidth() {
-    return window.innerWidth;
   }
 }
