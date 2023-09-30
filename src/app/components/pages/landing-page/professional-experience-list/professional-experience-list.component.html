@@ -4,136 +4,60 @@
   <span class="text-gradient gradient-orange">Professionnelle</span>
 </h1>
 
-<div class="flex flex-col text-off-black font-mono">
+<div class="flex flex-col gap-8 text-off-black font-mono">
   <!-- Capgemini -->
-  <div class="flex flex-row-reverse flex-wrap justify-between mt-8">
-    <!-- Use custom width elements to have a small space between (smaller than with w-8/12 and w-3/12).
-     Would like to use grid layout to do this, but it's not possible because we need the
-     flex-direction: row-reverse; of flexboxes for the even elements
-
-     We also play with "flex-wrap" and the roundness of borders to have two cards when on large screens
-     (one for the picture and one for the text) that combine to form a more traditionnal card on
-     small screens
-    -->
-    <img src="assets/images/Capgemini.jpg" alt="Capgemini" class="xl:w-[60%] w-full object-cover xl:rounded-xl rounded-t-xl thick-shadow">
-
-    <div class="xl:w-[38%] w-full bg-white xl:rounded-xl rounded-b-xl thick-shadow p-5 xl:text-right">
-      <img src="assets/images/Capgemini-logo.png" alt="Capgemini Logo" class="company-logo xl:ml-auto">
-      <h1 class="font-black mt-5">
-        <span class="company-name">Capgemini FS France</span><br>
-        <span class="experience-title" i18n>Développeur Full Stack</span>
-      </h1>
-      <div class="experience-info">
-        <div class="flex xl:flex-row-reverse flex-row">
-          <fa-icon [icon]="calendarIcon" class="w-10"></fa-icon>
-          <p class="grow" i18n>Avril 2023 - Septembre 2023</p>
-        </div>
-        <div class="flex xl:flex-row-reverse flex-row mt-5">
-          <fa-icon [icon]="locationIcon" class="w-10"></fa-icon>
-          <p class="grow" i18n>Montpellier, France (34)</p>
-        </div>
-      </div>
-      <p class="experience-description" i18n>Développement full stack d'une application de visualisation hiérarchique.</p>
-      <p class="experience-description" i18n>Frontend Angular, Angular Material, et Tailwind CSS. Backend Spring Boot et MySQL.</p>
-      <p class="experience-description" i18n>Recherches sur l'utilisation de l'IA générative durant le développement.</p>
-    </div>
-  </div>
+  <app-professional-experience-card [order]="'reverse'"
+                                    coverImageUrl="assets/images/Capgemini.jpg"
+                                    coverImageAlt="Capgemini"
+                                    logoUrl="assets/images/Capgemini-logo.png"
+                                    logoAlt="Capgemini Logo"
+                                    companyName="Capgemini FS France"
+                                    jobTitle="Développeur Full Stack"
+                                    dates="Avril 2023 - Septembre 2023"
+                                    location="Montpellier, France (34)"
+                                    jobDescription="Développement full stack d'une application de visualisation hiérarchique.|Frontend Angular, Angular Material, et Tailwind CSS. Backend Spring Boot et MySQL.|Recherches sur l'utilisation de l'IA générative durant le développement."
+                                    i18n-companyName i18n-jobTitle i18n-dates i18n-location i18n-jobDescription
+  ></app-professional-experience-card>
 
   <!-- GMM -->
-  <div class="flex flex-row flex-wrap justify-between mt-8">
-    <img src="assets/images/GMM.jpg" alt="General Medical Merate" class="xl:w-[60%] w-full object-cover xl:rounded-xl rounded-t-xl thick-shadow">
-
-    <div class="xl:w-[38%] w-full bg-white xl:rounded-xl rounded-b-xl thick-shadow p-5">
-      <img src="assets/images/GMM-logo.png" alt="General Medical Merate Logo" class="company-logo">
-      <h1 class="font-black mt-5">
-        <span class="company-name">General Medical Merate</span><br>
-        <span class="experience-title" i18n>Développeur C++</span>
-      </h1>
-      <div class="experience-info">
-        <div class="flex flex-row">
-          <fa-icon [icon]="calendarIcon" class="w-10"></fa-icon>
-          <p class="grow" i18n>Novembre 2021 - Avril 2022</p>
-        </div>
-        <div class="flex flex-row mt-5">
-          <fa-icon [icon]="locationIcon" class="w-10"></fa-icon>
-          <p class="grow" i18n>Seriate, Lombadie, Italie</p>
-        </div>
-      </div>
-      <p class="experience-description" i18n>Entreprise italienne spécialisée dans la conception et manufacture de matériel de radiologie.</p>
-      <p class="experience-description" i18n>Élaboration d’éléments d’interface complexes en réalité augmentée. Vision par ordinateur.</p>
-    </div>
-  </div>
+  <app-professional-experience-card [order]="'forward'"
+                                    coverImageUrl="assets/images/GMM.jpg"
+                                    coverImageAlt="General Medical Merate"
+                                    logoUrl="assets/images/GMM-logo.png"
+                                    logoAlt="General Medical Merate Logo"
+                                    companyName="General Medical Merate"
+                                    jobTitle="Développeur C++"
+                                    dates="Novembre 2021 - Avril 2022"
+                                    location="Seriate, Lombadie, Italie"
+                                    jobDescription="Entreprise italienne spécialisée dans la conception et manufacture de matériel de radiologie.|Élaboration d’éléments d’interface complexes en réalité augmentée. Vision par ordinateur."
+                                    i18n-companyName i18n-jobTitle i18n-dates i18n-location i18n-jobDescription
+  ></app-professional-experience-card>
 
   <!-- Primax -->
-  <div class="flex flex-row-reverse flex-wrap justify-between mt-8">
-    <img src="assets/images/primax.jpg" alt="Primax" class="xl:w-[60%] w-full object-cover xl:rounded-xl rounded-t-xl thick-shadow">
-
-    <div class="xl:w-[38%] w-full bg-white xl:rounded-xl rounded-b-xl thick-shadow p-5 xl:text-right">
-      <img src="assets/images/primaxLogo.png" alt="Primax Logo" class="company-logo xl:ml-auto">
-      <h1 class="font-black mt-5">
-        <span class="company-name">Primax</span><br>
-        <span class="experience-title" i18n>Assistant commercial</span>
-      </h1>
-      <div class="experience-info">
-        <div class="flex xl:flex-row-reverse flex-row">
-          <fa-icon [icon]="calendarIcon" class="w-10"></fa-icon>
-          <p class="grow" i18n>Janvier 2020</p>
-        </div>
-        <div class="flex xl:flex-row-reverse flex-row mt-5">
-          <fa-icon [icon]="locationIcon" class="w-10"></fa-icon>
-          <p class="grow" i18n>Rungis, France (94)</p>
-        </div>
-      </div>
-      <p class="experience-description" i18n>Vente de matériel de radiologie sur l’entièreté du marché français.</p>
-      <p class="experience-description" i18n>Utilisation de techiques commerciales avancées. Relation client long terme. <br>Négocier et préparer une affaire.</p>
-    </div>
-  </div>
+  <app-professional-experience-card [order]="'reverse'"
+                                    coverImageUrl="assets/images/primax.jpg"
+                                    coverImageAlt="Primax"
+                                    logoUrl="assets/images/primaxLogo.png"
+                                    logoAlt="Primax Logo"
+                                    companyName="Primax"
+                                    jobTitle="Assistant commercial"
+                                    dates="Janvier 2020"
+                                    location="Rungis, France (94)"
+                                    jobDescription="Vente de matériel de radiologie sur l’entièreté du marché français.|Utilisation de techniques commerciales avancées. Relation client long terme. Négocier et préparer une affaire."
+                                    i18n-companyName i18n-jobTitle i18n-dates i18n-location i18n-jobDescription
+  ></app-professional-experience-card>
 
   <!-- Minigolf -->
-  <div class="flex flex-row flex-wrap justify-between mt-8">
-    <img src="assets/images/minigolf.jpeg" alt="Minigolf de l'impérial" class="xl:w-[60%] w-full object-cover xl:rounded-xl rounded-t-xl thick-shadow">
-
-    <div class="xl:w-[38%] w-full bg-white xl:rounded-xl rounded-b-xl thick-shadow p-5">
-      <h1 class="font-black mt-5">
-        <span class="company-name">Minigolf de l'impérial</span><br>
-        <span class="experience-title" i18n>Job étudiant</span>
-      </h1>
-      <div class="experience-info">
-        <div class="flex flex-row">
-          <fa-icon [icon]="calendarIcon" class="w-10"></fa-icon>
-          <p class="grow" i18n>Juillet 2019</p>
-        </div>
-        <div class="flex flex-row mt-5">
-          <fa-icon [icon]="locationIcon" class="w-10"></fa-icon>
-          <p class="grow" i18n>Annecy, France (74)</p>
-        </div>
-      </div>
-      <p class="experience-description" i18n>Interagir avec la clientèle dans le but de réaliser une vente. Gérer un stand, une caisse et du stock. Résoudre des litiges client.</p>
-      <p class="experience-description" i18n>Expliquer les consignes avec pédagogie. Langues étrangères.</p>
-    </div>
-  </div>
-
-  <!-- Castorama -->
-  <div class="flex flex-row-reverse flex-wrap justify-between mt-8">
-    <img src="assets/images/castorama.jpg" alt="Castorama" class="xl:w-[60%] w-full object-cover xl:rounded-xl rounded-t-xl thick-shadow">
-
-    <div class="xl:w-[38%] w-full bg-white xl:rounded-xl rounded-b-xl thick-shadow p-5 xl:text-right">
-      <img src="assets/images/castoramaLogo.jpeg" alt="Castorama Logo" class="company-logo xl:ml-auto">
-      <h1 class="font-black mt-5">
-        <span class="company-name">Castorama</span><br>
-        <span class="experience-title" i18n>Stage ouvrier de 1<sup>ère</sup> année</span>
-      </h1>
-      <div class="experience-info">
-        <div class="flex xl:flex-row-reverse flex-row">
-          <fa-icon [icon]="calendarIcon" class="w-10"></fa-icon>
-          <p class="grow" i18n>Juin 2019</p>
-        </div>
-        <div class="flex xl:flex-row-reverse flex-row mt-5">
-          <fa-icon [icon]="locationIcon" class="w-10"></fa-icon>
-          <p class="grow" i18n>Fresnes, France (94)</p>
-        </div>
-      </div>
-      <p class="experience-description" i18n>Respecter des consignes comportementales strictes sur le lieu de travail.<br>Introduction au monde du travail.<br>S’adapter au fonctionnement d’un service.</p>
-    </div>
-  </div>
+  <app-professional-experience-card [order]="'forward'"
+                                    coverImageUrl="assets/images/minigolf.jpeg"
+                                    coverImageAlt="Minigolf de l'impérial"
+                                    logoUrl=""
+                                    logoAlt=""
+                                    companyName="Minigolf de l'impérial"
+                                    jobTitle="Job étudiant"
+                                    dates="Juillet 2019"
+                                    location="Annecy, France (74)"
+                                    jobDescription="Interagir avec la clientèle dans le but de réaliser une vente. Gérer un stand, une caisse et du stock. Résoudre des litiges client.|Expliquer les consignes avec pédagogie. Langues étrangères."
+                                    i18n-companyName i18n-jobTitle i18n-dates i18n-location i18n-jobDescription
+  ></app-professional-experience-card>
 </div>

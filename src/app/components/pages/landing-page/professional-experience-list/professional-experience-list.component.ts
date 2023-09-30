@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {faCalendarDays, faLocationDot} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: 'app-professional-experience-list',
@@ -7,9 +6,6 @@ import {faCalendarDays, faLocationDot} from "@fortawesome/free-solid-svg-icons";
   styleUrls: ['./professional-experience-list.component.css']
 })
 export class ProfessionalExperienceListComponent {
-
-  locationIcon = faLocationDot;
-  calendarIcon = faCalendarDays;
 
   constructor() { }
 }

@@ -1,0 +1,30 @@
+<div class="flex {{order === 'forward' ? 'flex-row' : 'flex-row-reverse'}} flex-wrap justify-between">
+  <!-- Use custom width elements to have a small space between (smaller than with w-8/12 and w-3/12).
+   Would like to use grid layout to do this, but it's not possible because we need the
+   flex-direction: row-reverse; of flexboxes for the even elements
+
+   We also play with "flex-wrap" and the roundness of borders to have two cards when on large screens
+   (one for the picture and one for the text) that combine to form a more traditionnal card on
+   small screens
+  -->
+  <img src="{{coverImageUrl}}" alt="{{coverImageAlt}}" class="xl:w-[60%] w-full object-cover xl:rounded-xl rounded-t-xl thick-shadow">
+
+  <div class="xl:w-[38%] w-full bg-white xl:rounded-xl rounded-b-xl thick-shadow p-5 {{order === 'forward' ? '' : 'xl:text-right'}}">
+    <img *ngIf="logoUrl" src="{{logoUrl}}" alt="{{logoAlt}}" class="w-[150px] {{order === 'forward' ? '' : 'xl:ml-auto'}}">
+    <h1 class="font-black mt-5">
+      <span class="md:text-2xl text-xl">{{companyName}}</span><br>
+      <span class="md:text-xl text-lg">{{jobTitle}}</span>
+    </h1>
+    <div class="md:text-lg font-light mt-5">
+      <div class="flex {{order === 'forward' ? '' : 'xl:flex-row-reverse'}} flex-row">
+        <fa-icon [icon]="calendarIcon" class="w-10"></fa-icon>
+        <p class="grow">{{dates}}</p>
+      </div>
+      <div class="flex {{order === 'forward' ? '' : 'xl:flex-row-reverse'}} flex-row mt-5">
+        <fa-icon [icon]="locationIcon" class="w-10"></fa-icon>
+        <p class="grow">{{location}}</p>
+      </div>
+    </div>
+    <p class="mt-5" *ngFor="let part of jobDescriptionSplit">{{part}}</p>
+  </div>
+</div>

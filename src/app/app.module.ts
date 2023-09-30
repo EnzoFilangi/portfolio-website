@@ -30,6 +30,7 @@ import { LinkToFilenamePipe } from './pipes/link-to-filename.pipe';
 import { AssociationStackComponent } from './components/pages/landing-page/associative-experience-list/association-stack/association-stack.component';
 import { AssociationCardComponent } from './components/pages/landing-page/associative-experience-list/association-card/association-card.component';
 import { CardOpennerComponent } from './components/pages/landing-page/associative-experience-list/card-openner/card-openner.component';
+import { ProfessionalExperienceCardComponent } from './components/pages/landing-page/professional-experience-list/professional-experience-card/professional-experience-card.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { CardOpennerComponent } from './components/pages/landing-page/associativ
     LinkToFilenamePipe,
     AssociationStackComponent,
     AssociationCardComponent,
-    CardOpennerComponent
+    CardOpennerComponent,
+    ProfessionalExperienceCardComponent
   ],
   imports: [
     BrowserModule,
