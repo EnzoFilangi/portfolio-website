@@ -5,23 +5,49 @@
 </h1>
 
 <div class="flex flex-col text-off-black font-mono">
-  <!-- GMM -->
-  <div class="flex flex-row flex-wrap justify-between">
+  <!-- Capgemini -->
+  <div class="flex flex-row-reverse flex-wrap justify-between mt-8">
     <!-- Use custom width elements to have a small space between (smaller than with w-8/12 and w-3/12).
-         Would like to use grid layout to do this, but it's not possible because we need the
-         flex-direction: row-reverse; of flexboxes for the even elements
+     Would like to use grid layout to do this, but it's not possible because we need the
+     flex-direction: row-reverse; of flexboxes for the even elements
 
-         We also play with "flex-wrap" and the roundness of borders to have two cards when on large screens
-         (one for the picture and one for the text) that combine to form a more traditionnal card on
-         small screens
+     We also play with "flex-wrap" and the roundness of borders to have two cards when on large screens
+     (one for the picture and one for the text) that combine to form a more traditionnal card on
+     small screens
     -->
+    <img src="assets/images/Capgemini.jpg" alt="Capgemini" class="xl:w-[60%] w-full object-cover xl:rounded-xl rounded-t-xl thick-shadow">
+
+    <div class="xl:w-[38%] w-full bg-white xl:rounded-xl rounded-b-xl thick-shadow p-5 xl:text-right">
+      <img src="assets/images/Capgemini-logo.png" alt="Capgemini Logo" class="company-logo xl:ml-auto">
+      <h1 class="font-black mt-5">
+        <span class="company-name">Capgemini FS France</span><br>
+        <span class="experience-title" i18n>Développeur Full Stack</span>
+      </h1>
+      <div class="experience-info">
+        <div class="flex xl:flex-row-reverse flex-row">
+          <fa-icon [icon]="calendarIcon" class="w-10"></fa-icon>
+          <p class="grow" i18n>Avril 2023 - Septembre 2023</p>
+        </div>
+        <div class="flex xl:flex-row-reverse flex-row mt-5">
+          <fa-icon [icon]="locationIcon" class="w-10"></fa-icon>
+          <p class="grow" i18n>Montpellier, France (34)</p>
+        </div>
+      </div>
+      <p class="experience-description" i18n>Développement full stack d'une application de visualisation hiérarchique.</p>
+      <p class="experience-description" i18n>Frontend Angular, Angular Material, et Tailwind CSS. Backend Spring Boot et MySQL.</p>
+      <p class="experience-description" i18n>Recherches sur l'utilisation de l'IA générative durant le développement.</p>
+    </div>
+  </div>
+
+  <!-- GMM -->
+  <div class="flex flex-row flex-wrap justify-between mt-8">
     <img src="assets/images/GMM.jpg" alt="General Medical Merate" class="xl:w-[60%] w-full object-cover xl:rounded-xl rounded-t-xl thick-shadow">
 
     <div class="xl:w-[38%] w-full bg-white xl:rounded-xl rounded-b-xl thick-shadow p-5">
       <img src="assets/images/GMM-logo.png" alt="General Medical Merate Logo" class="company-logo">
       <h1 class="font-black mt-5">
         <span class="company-name">General Medical Merate</span><br>
-        <span class="experience-title" i18n>Développeur logiciel</span>
+        <span class="experience-title" i18n>Développeur C++</span>
       </h1>
       <div class="experience-info">
         <div class="flex flex-row">

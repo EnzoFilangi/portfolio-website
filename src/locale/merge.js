@@ -33,4 +33,4 @@ for (let key in translations_en_US){
 
 // Create the new translation file and output it to stdout
 object_en_US.translations = mergedTranslations
-console.log(object_en_US)
+console.log(JSON.stringify(object_en_US))
