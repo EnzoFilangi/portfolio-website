@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {PlatformModule} from '@angular/cdk/platform';
+import { PlatformModule } from '@angular/cdk/platform';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,7 +13,6 @@ import { StudiesTimelineComponent } from './components/pages/landing-page/studie
 import { HeroHeaderComponent } from './components/pages/landing-page/hero-header/hero-header.component';
 import { ProfessionalExperienceListComponent } from './components/pages/landing-page/professional-experience-list/professional-experience-list.component';
 import { AssociativeExperienceListComponent } from './components/pages/landing-page/associative-experience-list/associative-experience-list.component';
-import { FeaturedProjectsComponent } from './components/pages/landing-page/featured-projects/featured-projects.component';
 import { LegalComponent } from './components/pages/legal/legal.component';
 import { SkillsComponent } from './components/pages/skills/skills.component';
 import { LogoCardComponent } from './components/pages/skills/logo-card/logo-card.component';
@@ -43,7 +42,6 @@ import { ProfessionalExperienceCardComponent } from './components/pages/landing-
     HeroHeaderComponent,
     ProfessionalExperienceListComponent,
     AssociativeExperienceListComponent,
-    FeaturedProjectsComponent,
     LegalComponent,
     SkillsComponent,
     LogoCardComponent,

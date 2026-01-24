@@ -5,59 +5,41 @@
 </h1>
 
 <div class="flex flex-col gap-8 text-off-black font-mono">
+  <!-- Galitt -->
+  <app-professional-experience-card [order]="'forward'" coverImageUrl="assets/images/Galitt.jpg" coverImageAlt="Galitt"
+    logoUrl="assets/images/Galitt-logo.png" logoAlt="Galitt Logo" companyName="Galitt (Sopra Steria)"
+    jobTitle="Développeur Full Stack TS/Go - Référent technique" dates="Mars 2024 - Aujourd'hui"
+    location="Paris, France (92)"
+    jobDescription="Développement d’une application SaaS de test monétique.|Frontend React ; Backend Typescript & Go ; microservices avec MongoDB et Temporal.|Déploiement dynamique de ressources sur Kubernetes/Helm et automatisation CI/CD.|Projet en agilité (SCRUM).|Référent technique de l’équipe depuis 2025, contribuant à l’architecture, la qualité du code et la montée en compétences des développeurs."
+    i18n-companyName i18n-jobTitle i18n-dates i18n-location i18n-jobDescription></app-professional-experience-card>
+
   <!-- Capgemini -->
-  <app-professional-experience-card [order]="'reverse'"
-                                    coverImageUrl="assets/images/Capgemini.jpg"
-                                    coverImageAlt="Capgemini"
-                                    logoUrl="assets/images/Capgemini-logo.png"
-                                    logoAlt="Capgemini Logo"
-                                    companyName="Capgemini FS France"
-                                    jobTitle="Développeur Full Stack"
-                                    dates="Avril 2023 - Septembre 2023"
-                                    location="Montpellier, France (34)"
-                                    jobDescription="Développement full stack d'une application de visualisation hiérarchique.|Frontend Angular, Angular Material, et Tailwind CSS. Backend Spring Boot et MySQL.|Recherches sur l'utilisation de l'IA générative durant le développement."
-                                    i18n-companyName i18n-jobTitle i18n-dates i18n-location i18n-jobDescription
-  ></app-professional-experience-card>
+  <app-professional-experience-card [order]="'reverse'" coverImageUrl="assets/images/Capgemini.jpg"
+    coverImageAlt="Capgemini" logoUrl="assets/images/Capgemini-logo.png" logoAlt="Capgemini Logo"
+    companyName="Capgemini FS France" jobTitle="Développeur Full Stack" dates="Avril 2023 - Septembre 2023"
+    location="Montpellier, France (34)"
+    jobDescription="Développement full stack d'une application de visualisation hiérarchique.|Frontend Angular, Angular Material, et Tailwind CSS. Backend Spring Boot et MySQL.|Recherches sur l'utilisation de l'IA générative durant le développement."
+    i18n-companyName i18n-jobTitle i18n-dates i18n-location i18n-jobDescription></app-professional-experience-card>
 
   <!-- GMM -->
-  <app-professional-experience-card [order]="'forward'"
-                                    coverImageUrl="assets/images/GMM.jpg"
-                                    coverImageAlt="General Medical Merate"
-                                    logoUrl="assets/images/GMM-logo.png"
-                                    logoAlt="General Medical Merate Logo"
-                                    companyName="General Medical Merate"
-                                    jobTitle="Développeur C++"
-                                    dates="Novembre 2021 - Avril 2022"
-                                    location="Seriate, Lombadie, Italie"
-                                    jobDescription="Entreprise italienne spécialisée dans la conception et manufacture de matériel de radiologie.|Élaboration d’éléments d’interface complexes en réalité augmentée. Vision par ordinateur."
-                                    i18n-companyName i18n-jobTitle i18n-dates i18n-location i18n-jobDescription
-  ></app-professional-experience-card>
+  <app-professional-experience-card [order]="'forward'" coverImageUrl="assets/images/GMM.jpg"
+    coverImageAlt="General Medical Merate" logoUrl="assets/images/GMM-logo.png" logoAlt="General Medical Merate Logo"
+    companyName="General Medical Merate" jobTitle="Développeur C++" dates="Novembre 2021 - Avril 2022"
+    location="Seriate, Lombadie, Italie"
+    jobDescription="Entreprise italienne spécialisée dans la conception et manufacture de matériel de radiologie.|Élaboration d’éléments d’interface complexes en réalité augmentée. Vision par ordinateur."
+    i18n-companyName i18n-jobTitle i18n-dates i18n-location i18n-jobDescription></app-professional-experience-card>
 
   <!-- Primax -->
-  <app-professional-experience-card [order]="'reverse'"
-                                    coverImageUrl="assets/images/primax.jpg"
-                                    coverImageAlt="Primax"
-                                    logoUrl="assets/images/primaxLogo.png"
-                                    logoAlt="Primax Logo"
-                                    companyName="Primax"
-                                    jobTitle="Assistant commercial"
-                                    dates="Janvier 2020"
-                                    location="Rungis, France (94)"
-                                    jobDescription="Vente de matériel de radiologie sur l’entièreté du marché français.|Utilisation de techniques commerciales avancées. Relation client long terme. Négocier et préparer une affaire."
-                                    i18n-companyName i18n-jobTitle i18n-dates i18n-location i18n-jobDescription
-  ></app-professional-experience-card>
+  <app-professional-experience-card [order]="'reverse'" coverImageUrl="assets/images/primax.jpg" coverImageAlt="Primax"
+    logoUrl="assets/images/primaxLogo.png" logoAlt="Primax Logo" companyName="Primax" jobTitle="Assistant commercial"
+    dates="Janvier 2020" location="Rungis, France (94)"
+    jobDescription="Vente de matériel de radiologie sur l’entièreté du marché français.|Utilisation de techniques commerciales avancées. Relation client long terme. Négocier et préparer une affaire."
+    i18n-companyName i18n-jobTitle i18n-dates i18n-location i18n-jobDescription></app-professional-experience-card>
 
   <!-- Minigolf -->
-  <app-professional-experience-card [order]="'forward'"
-                                    coverImageUrl="assets/images/minigolf.jpeg"
-                                    coverImageAlt="Minigolf de l'impérial"
-                                    logoUrl=""
-                                    logoAlt=""
-                                    companyName="Minigolf de l'impérial"
-                                    jobTitle="Job étudiant"
-                                    dates="Juillet 2019"
-                                    location="Annecy, France (74)"
-                                    jobDescription="Interagir avec la clientèle dans le but de réaliser une vente. Gérer un stand, une caisse et du stock. Résoudre des litiges client.|Expliquer les consignes avec pédagogie. Langues étrangères."
-                                    i18n-companyName i18n-jobTitle i18n-dates i18n-location i18n-jobDescription
-  ></app-professional-experience-card>
+  <app-professional-experience-card [order]="'forward'" coverImageUrl="assets/images/minigolf.jpeg"
+    coverImageAlt="Minigolf de l'impérial" logoUrl="" logoAlt="" companyName="Minigolf de l'impérial"
+    jobTitle="Job étudiant" dates="Juillet 2019" location="Annecy, France (74)"
+    jobDescription="Interagir avec la clientèle dans le but de réaliser une vente. Gérer un stand, une caisse et du stock. Résoudre des litiges client.|Expliquer les consignes avec pédagogie. Langues étrangères."
+    i18n-companyName i18n-jobTitle i18n-dates i18n-location i18n-jobDescription></app-professional-experience-card>
 </div>
